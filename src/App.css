@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  color: #1F3442;
+  font-size: 72px;
+  padding: 48px;
+}
+
+h3 {
+  color: #1F3442;
+  font-size: 28px;
+  padding: 16px;
+  padding-left: 48px;
+}
+
+.h3highlight {
+  font-weight: bold;
+  background-color: #ECC335;
+}
+
+.big-link {
+  color: #1F3442;
+  text-decoration: underline;
+}
+
+#intro {
+  background-color: transparent;
+}
+
+.side-nav {
+  font-size: 18px;
+  color: #404040;
+}
+
+#name {
+  font-weight: bold;
+  color: #404040;
+
+}
+
+.no-border-important {
+  border: 0 !important;
+}
