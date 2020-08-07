@@ -37,14 +37,17 @@ class Home extends React.Component {
   render(){
     return (
         <div class = 'pt-5'>
-          <Container>
+          <Container name="top">
             <Row>
               <Col xs={2}>
-                  <NavBar/>
+                  <div class = 'sticky-sidebar'>
+                    <NavBar/>
+                  </div>
               </Col>
               <Col>
                 <AboveFold/>
-                <Gallery/>
+                <Gallery section='work' />
+                <Gallery section='play'/>
                 <AboutMe/>
                 <h1> Hello {this.state.nameIsJanet ? 'Janet' : 'Jackie'} </h1>
                 <Child 
@@ -52,7 +55,6 @@ class Home extends React.Component {
                 />
               </Col>
             </Row>
-
           </Container>
             
         </div>

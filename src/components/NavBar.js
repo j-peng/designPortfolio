@@ -10,7 +10,8 @@ class NavBar extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            nameIsJanet : true
+            nameIsJanet : true,
+            currSection: null
           }
       }
 
@@ -18,30 +19,32 @@ class NavBar extends React.Component{
         return(
             <div>
                 <div class="list-group side-nav">
-                    <div id='name'>
-                        <a class="list-group-item list-group-item-action no-border-important" 
-                           href="#intro" onClick={scroll.scrollToTop()}>
-                            Janet Peng
+                    <div id='name-logo'>
+                        <a class="list-group-item list-group-item-action no-border-important">
+                            <Link activeClass="active" to="top" spy={true} smooth={true} duration={800}> 
+                                Janet Peng
+                            </Link>
                         </a>
                     </div>
 
-                    <div class="border-left border-dark">
-                        <a class="list-group-item list-group-item-action no-border-important" 
-                           href="#work">
-                            Work
+                    <div class="border side-nav-item">
+                        <a class="list-group-item list-group-item-action no-border-important">
+                            <Link activeClass="active" to="work" spy={true} smooth={true} duration={800}> 
+                                Work
+                            </Link>
                         </a>
                     </div>
 
-                    <div class="border-left border-dark">
-                        <a class="list-group-item list-group-item-action no-border-important" 
-                           href="#play">
-                            Play
+                    <div class="border side-nav-item">
+                        <a class="list-group-item list-group-item-action no-border-important">
+                            <Link activeClass="active" to="play" spy={true} smooth={true} duration={800}> 
+                                Play
+                            </Link>
                         </a>
                     </div>
 
-                    <div class="border-left border-dark">
-                        <a class="list-group-item list-group-item-action no-border-important" 
-                           href="#about">
+                    <div class="border side-nav-item">
+                        <a class="list-group-item list-group-item-action no-border-important" >
                             <Link activeClass="active" to="about" spy={true} smooth={true} duration={800}> 
                                 About Me 
                             </Link>

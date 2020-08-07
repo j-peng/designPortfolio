@@ -21,7 +21,7 @@ class AboveFold extends React.Component {
             </h3>
             <h3>
                 I’m a Content Developer and the&nbsp;
-                <span class = 'h3highlight'>UX Design Team Lead</span> @ 
+                <span class = 'h3highlight'>UX Design Team Lead</span> @
                   <a href='https://academy.cs.cmu.edu/' 
                      class='big-link'
                      target="_blank">CMU CS Academy </a>
