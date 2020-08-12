@@ -12,8 +12,10 @@ class GalleryCard extends React.Component {
                 <Card.ImgOverlay>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
-                        {this.props.type}
-                        {this.props.tools}
+                      {this.props.type}
+                    </Card.Text>
+                    <Card.Text>
+                      {this.props.tools}
                     </Card.Text>
                 </Card.ImgOverlay>
             </Card>

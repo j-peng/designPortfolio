@@ -9,7 +9,7 @@ class AboveFold extends React.Component {
   render(){
     return (
       <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-      <Jumbotron id="intro" class='bg-white'>
+      <Jumbotron id="intro">
             <h1>Hey there, I’m Janet</h1>
             <h3>
                 I’m a Junior studying&nbsp;  

@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import { SocialIcon } from 'react-social-icons';
+
 class AboutMe extends React.Component {
   constructor(props){
     super(props)
@@ -12,7 +14,7 @@ class AboutMe extends React.Component {
   render(){
     return (
       <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example pt-5">
-      <Jumbotron id="about" class='bg-white'>
+      <Jumbotron id="about">
         <Container>
           <Row>
             <Col xs={4}>
@@ -49,6 +51,40 @@ class AboutMe extends React.Component {
                 jjpeng@andrew.cmu.edu. I'd love to talk. I'm currently looking for 
                 an opportunity in summer 2021.
               </p>
+              <div class = 'pt-3'>
+                <span class='social-pad'>
+                <SocialIcon url='https://www.linkedin.com/in/janet-peng-348198133/'
+                            style={{ height: 40, width: 40 }} 
+                            bgColor="#404040"
+                            target="_blank"/>
+                </span>
+
+                <span class='social-pad'>
+                <SocialIcon url="https://medium.com/@jjpeng" 
+                            style={{ height: 40, width: 40 }} 
+                            bgColor="#404040"
+                            target="_blank"/>
+                </span>
+
+                <span class='social-pad'>
+                <SocialIcon url='https://www.behance.net/jjpeng'
+                            style={{ height: 40, width: 40 }} 
+                            bgColor="#404040"
+                            target="_blank"/>
+                </span>
+
+                <span class='social-pad'>
+                <SocialIcon url='https://github.com/j-peng'
+                            style={{ height: 40, width: 40 }} 
+                            bgColor="#404040"
+                            target="_blank"/>
+                </span>
+                
+                <a href={require("./media/resume.pdf")} class='social-pad link' target='blank'>
+                  Resume
+                </a>
+                
+              </div>
             </Col>
           </Row>
         </Container>

@@ -22,6 +22,7 @@ class Home extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.handlePageChangeClick = this.handlePageChangeClick.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
   }
   
   handleClick(){
@@ -34,6 +35,11 @@ class Home extends React.Component {
 
   }
 
+  handleScroll(){
+    console.log(window.pageYOffset)
+    console.log('hi')
+  }
+
   render(){
     return (
         <div class = 'pt-5'>
@@ -41,12 +47,13 @@ class Home extends React.Component {
             <Row>
               <Col xs={2}>
                   <div class = 'sticky-sidebar'>
-                    <NavBar/>
+                    <NavBar handleClick = {this.handleNavClick}/>
                   </div>
               </Col>
-              <Col>
+              <Col onScroll = {()=>this.handleScroll()}>
                 <AboveFold/>
                 <Gallery section='work' />
+                <div class = 'pt-5'></div>
                 <Gallery section='play'/>
                 <AboutMe/>
                 <h1> Hello {this.state.nameIsJanet ? 'Janet' : 'Jackie'} </h1>
