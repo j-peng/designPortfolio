@@ -1,5 +1,8 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 
 class AboveFold extends React.Component {
   constructor(props){
@@ -8,25 +11,38 @@ class AboveFold extends React.Component {
 
   render(){
     return (
-      <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-      <Jumbotron id="intro">
-            <h1>Hey there, I’m Janet</h1>
-            <h3>
-                I’m a Junior studying&nbsp;  
-                <span class = 'h3highlight'>Product Design</span> @
-                  <a href='https://www.design.cmu.edu/' 
-                     class='big-link'
-                     target="_blank">CMU </a>
-                
-            </h3>
-            <h3>
-                I’m a Content Developer and the&nbsp;
-                <span class = 'h3highlight'>UX Design Team Lead</span> @
-                  <a href='https://academy.cs.cmu.edu/' 
-                     class='big-link'
-                     target="_blank">CMU CS Academy </a>
-            </h3>
-        </Jumbotron>
+      <div class='py-5'>
+      <Container name="top" fluid="md">
+        <Row>
+          <Col md = {2}></Col>
+          <Col> <h5 class='pb-2'>Hey there, I’m Janet Peng</h5> </Col>
+        </Row>
+            <Row>
+              <Col md = {2}>
+              </Col>
+              <Col>
+                <h2 class='pb-2'>Junior studying Product Design @ 
+                  <a href='https://www.design.cmu.edu/' target="_blank" class='link'>CMU</a>
+                </h2>
+                <h2>Content Developer and UX Design Team Lead @ 
+                  <a href='https://academy.cs.cmu.edu/' target="_blank" class='link'>CMU CS Academy</a>
+                </h2>
+              </Col>
+              <Col>
+                <p>I'm interested in designing experiences, especially if they are 
+                   supported by physical products. When designing, I like to consider 
+                   how my designs may complement the larger system. I believe in 
+                   user-centered design and user testing and research is a large 
+                   part of my design process.
+                </p>
+                <p>
+                  Besides design, I love exploring new skills such as programming, 
+                  illustration, photography, and baking. I love technology and 
+                  am persuing a minor in Computer Science.
+                </p>
+              </Col>
+        </Row>
+      </Container>
 
       </div>
     )

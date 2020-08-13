@@ -1,16 +1,12 @@
 import React from 'react';
-import Child from './child.js'
-import NavBar from './NavBar.js'
+
 import AboveFold from './AboveFold.js'
-import Gallery from './Gallery.js'
-import AboutMe from './AboutMe.js'
+import GalleryRow from './GalleryRow.js'
+import SectionTitle from './SectionTitle.js'
+import TitledContent from './ContentBlock.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
 
 import '../App.css';
 
@@ -21,8 +17,6 @@ class Home extends React.Component {
       nameIsJanet : true,
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handlePageChangeClick = this.handlePageChangeClick.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
   }
   
   handleClick(){
@@ -31,40 +25,56 @@ class Home extends React.Component {
     })
   }
 
-  handlePageChangeClick(){
-
-  }
-
-  handleScroll(){
-    console.log(window.pageYOffset)
-    console.log('hi')
-  }
-
   render(){
     return (
-        <div class = 'pt-5'>
-          <Container name="top">
-            <Row>
-              <Col xs={2}>
-                  <div class = 'sticky-sidebar'>
-                    <NavBar handleClick = {this.handleNavClick}/>
-                  </div>
-              </Col>
-              <Col onScroll = {()=>this.handleScroll()}>
-                <AboveFold/>
-                <Gallery section='work' />
-                <div class = 'pt-5'></div>
-                <Gallery section='play'/>
-                <AboutMe/>
-                <h1> Hello {this.state.nameIsJanet ? 'Janet' : 'Jackie'} </h1>
-                <Child 
-                  handleClick = {this.handleClick}
-                />
-              </Col>
-            </Row>
-          </Container>
-            
-        </div>
+        <div>
+          <div class='pt-5'>
+            <AboveFold></AboveFold>
+
+              {/* gallery */}
+              <SectionTitle name='Work'></SectionTitle>
+              <div>
+              <Container name="top" fluid="md">
+                <GalleryRow card1Info={Array('Flowform wood spatula' , 
+                                        'Product Design',
+                                          require("./media/cover_spatula.jpg"),
+                                          '/play' )}
+                            card2Info={Array('Book table' , 
+                                        'Product Design',
+                                          require("./media/cover_booktable.jpg"),
+                                        'http://google.com/' )}>
+                                        
+                </GalleryRow>
+
+                <GalleryRow card1Info={Array('Single slice toaster' , 
+                                        'Product Design',
+                                          require("./media/cover_toaster.jpg"),
+                                        'http://google.com/' )}
+                            card2Info={Array('Semantics of form exploration' , 
+                                        'Product Design',
+                                          require("./media/cover_semantics.jpg"),
+                                        'http://google.com/' )}>
+                                        
+                </GalleryRow>
+
+                <GalleryRow card1Info={Array('CMU CS Academy' , 
+                                        'UI/UX + Design Research',
+                                          require("./media/cover_csa.jpg"),
+                                        '/csacademy' )}
+                            card2Info={Array('Nourishing our communities + Scheduling our Socials' , 
+                                        'Design Research',
+                                          require("./media/cover_nocsos.jpg"),
+                                        'http://google.com/' )}>
+                                        
+                </GalleryRow>
+                </Container>
+              </div>
+
+            </div>
+            <SectionTitle name='Title'></SectionTitle>
+            <TitledContent title='Team'
+                           body='Monica Chang, Se Eun Park, V Shiau'></TitledContent>
+          </div>
     )
   }
 }
