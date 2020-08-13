@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/designPortfolio/static/css/main.8b47670a.chunk.css",
+    "main.js": "/designPortfolio/static/js/main.0757a15e.chunk.js",
+    "main.js.map": "/designPortfolio/static/js/main.0757a15e.chunk.js.map",
+    "runtime-main.js": "/designPortfolio/static/js/runtime-main.c5f27390.js",
+    "runtime-main.js.map": "/designPortfolio/static/js/runtime-main.c5f27390.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/designPortfolio/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.387b58e8.chunk.js": "/designPortfolio/static/js/2.387b58e8.chunk.js",
+    "static/js/2.387b58e8.chunk.js.map": "/designPortfolio/static/js/2.387b58e8.chunk.js.map",
+    "index.html": "/designPortfolio/index.html",
+    "precache-manifest.f35b2f3380de56f74a3503595fec4823.js": "/designPortfolio/precache-manifest.f35b2f3380de56f74a3503595fec4823.js",
+    "service-worker.js": "/designPortfolio/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/designPortfolio/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.8b47670a.chunk.css.map": "/designPortfolio/static/css/main.8b47670a.chunk.css.map",
+    "static/js/2.387b58e8.chunk.js.LICENSE.txt": "/designPortfolio/static/js/2.387b58e8.chunk.js.LICENSE.txt",
+    "static/media/cover_bme.jpg": "/designPortfolio/static/media/cover_bme.96463b6e.jpg",
+    "static/media/cover_booktable.jpg": "/designPortfolio/static/media/cover_booktable.ed163c2a.jpg",
+    "static/media/cover_contentdev.png": "/designPortfolio/static/media/cover_contentdev.851a0895.png",
+    "static/media/cover_csa.jpg": "/designPortfolio/static/media/cover_csa.56ed5bd8.jpg",
+    "static/media/cover_csaillustration.png": "/designPortfolio/static/media/cover_csaillustration.f1d9bb0e.png",
+    "static/media/cover_nocsos.jpg": "/designPortfolio/static/media/cover_nocsos.78415474.jpg",
+    "static/media/cover_python.png": "/designPortfolio/static/media/cover_python.7e6b9c63.png",
+    "static/media/cover_semantics.jpg": "/designPortfolio/static/media/cover_semantics.467e508c.jpg",
+    "static/media/cover_spatula.jpg": "/designPortfolio/static/media/cover_spatula.0c755ec5.jpg",
+    "static/media/cover_toaster.jpg": "/designPortfolio/static/media/cover_toaster.47916f4f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5f27390.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.387b58e8.chunk.js",
+    "static/css/main.8b47670a.chunk.css",
+    "static/js/main.0757a15e.chunk.js"
+  ]
+}
