@@ -85,6 +85,22 @@ p {
   font-size: 14px;
 }
 
+.tab-button {
+  color: #302F2B;
+  font-size: 14px;
+}
+
+.tab-button:hover {
+  color: #A8A9A4;
+  text-decoration: none;
+}
+
+.tab-button:active {
+  color: #A8A9A4;
+  text-decoration: none;
+  background-color: #FFFFFF !important;
+}
+
 /* a:hover{
   color: #A8A9A4;
   border-bottom: 1px solid currentColor;

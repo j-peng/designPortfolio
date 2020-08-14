@@ -10,14 +10,11 @@ import Footer from './components/Footer.js'
 
 import CSAcademy from './components/pages/CSAcademy.js'
 
+import ScrollToTop from './components/ScrollToTop.js'
+
 import './App.css';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -33,16 +30,20 @@ function App() {
 
       <Switch>
           <Route exact path="/">
+            <ScrollToTop/>
             <Home/>
           </Route>
           <Route path="/play">
+            <ScrollToTop/>
             <Play/>
           </Route>
           <Route path="/about">
+            <ScrollToTop/>
             <About/>
           </Route>
           
           <Route path="/csacademy">
+            <ScrollToTop/>
             <CSAcademy/>
           </Route>
       </Switch>

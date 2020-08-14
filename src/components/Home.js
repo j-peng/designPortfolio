@@ -30,9 +30,9 @@ class Home extends React.Component {
         <div>
           <div class='pt-5'>
             <AboveFold></AboveFold>
-
-              {/* gallery */}
+              
               <SectionTitle name='Work'></SectionTitle>
+              
               <div>
               <Container name="top" fluid="md">
                 <GalleryRow card1Info={Array('Flowform wood spatula' , 
@@ -69,11 +69,7 @@ class Home extends React.Component {
                 </GalleryRow>
                 </Container>
               </div>
-
             </div>
-            <SectionTitle name='Title'></SectionTitle>
-            <TitledContent title='Team'
-                           body='Monica Chang, Se Eun Park, V Shiau'></TitledContent>
           </div>
     )
   }
