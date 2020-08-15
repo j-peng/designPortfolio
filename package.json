@@ -1,5 +1,5 @@
 {
-  "homepage": "https://j-peng.github.io/designPortfolio/",
+  "homepage": "https://janet-peng-design-portfolio.web.app/",
   "name": "portfolio-build",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-scroll": "^1.8.0",
-    "react-viewerjs": "^0.1.9"
+    "react-viewerjs": "^0.1.9",
+    "react-youtube": "^7.11.3"
   },
   "scripts": {
     "predeploy": "npm run build",

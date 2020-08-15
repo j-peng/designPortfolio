@@ -23,7 +23,7 @@ class Play extends React.Component {
                 <GalleryRow card1Info={Array('Python Coding Projects' , 
                                         'Programming',
                                           require("./media/cover_python.png"),
-                                        'http://google.com/' )}
+                                        '/python' )}
                             card2Info={Array('CMU CS Academy Content Development' , 
                                         'Programming',
                                           require("./media/cover_contentdev.png"),

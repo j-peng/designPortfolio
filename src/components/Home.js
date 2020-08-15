@@ -38,7 +38,7 @@ class Home extends React.Component {
                 <GalleryRow card1Info={Array('Flowform wood spatula' , 
                                         'Product Design',
                                           require("./media/cover_spatula.jpg"),
-                                          '/play' )}
+                                          '/flowform' )}
                             card2Info={Array('Book table' , 
                                         'Product Design',
                                           require("./media/cover_booktable.jpg"),
@@ -53,7 +53,7 @@ class Home extends React.Component {
                             card2Info={Array('Semantics of form exploration' , 
                                         'Product Design',
                                           require("./media/cover_semantics.jpg"),
-                                        'http://google.com/' )}>
+                                        '/semantics' )}>
                                         
                 </GalleryRow>
 

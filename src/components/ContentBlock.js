@@ -65,7 +65,7 @@ class CustomContent extends React.Component {
 
 class Image extends React.Component {
   render(){
-    let options = {navbar: 0, title: [ 1, this.props.caption ], 
+    let options = {navbar: 0, title: [ 1, (image) => this.props.caption ], 
                    toolbar: { prev: false, next: false, 
                               rotateLeft: false, rotateRight: false,
                               flipHorizontal: false, flipVertical: false,
@@ -97,6 +97,58 @@ class Image extends React.Component {
 
                 </Col>
             </Row>
+        </Container>
+      </div>
+    )
+  }
+}
+
+class ImageLibrary extends React.Component {
+  makeImage(){
+    let result = []
+    let myOptions = { transition: false, 
+                      navbar: 0, 
+                      title: 0, 
+                      toolbar: { rotateLeft: false, rotateRight: false,
+                                flipHorizontal: false, flipVertical: false,
+                                reset: false, play: false}
+                    }
+    let margin = Math.floor((12 - this.props.size) / 2)
+
+    for (var i=0; i < this.props.imageList.length; i++) {
+      result.push(<Row>
+                    <Col md={margin}></Col>
+                    <Col md={this.props.size}>
+                      <RViewer options={myOptions} 
+                              imageUrls={this.props.imageList}>
+                      <RViewerTrigger>
+                        <Figure class='pb-5'>
+                          <Figure.Image alt={this.props.altTextList[i]}
+                                        src={this.props.imageList[i]}/>
+                          <Figure.Caption class='align-center caption'>
+                            {this.props.captionList[i]}
+                          </Figure.Caption>
+                        </Figure>
+                      </RViewerTrigger>
+                      </RViewer>
+                    </Col>
+                  </Row>)}
+    
+    return(
+      <div>
+        {result}
+      </div>
+    )
+  }
+
+  render(){
+    
+    let body = this.makeImage()
+
+    return (
+      <div>
+        <Container>
+          {body}
         </Container>
       </div>
     )
@@ -137,4 +189,4 @@ class SmallContentBlock extends React.Component {
 }
 
 export default TitledContent;
-export {ContentBlock, CustomContent, Image, Divider, SmallContentBlock};
+export {ContentBlock, CustomContent, Image, ImageLibrary, Divider, SmallContentBlock};

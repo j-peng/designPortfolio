@@ -90,9 +90,9 @@ class CSAToggle extends React.Component {
         let var2 = 'light'
         let var3 = 'light'
 
-        if (this.props.tabStates[0]){ var1 = 'secondary'}
-        else if (this.props.tabStates[1]){ var2 = 'secondary'}
-        else { var3 = 'secondary'}
+        if (this.props.tabStates[0]){ var1 = 'my-dark'}
+        else if (this.props.tabStates[1]){ var2 = 'my-dark'}
+        else { var3 = 'my-dark'}
 
         return (
         <div>

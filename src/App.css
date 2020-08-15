@@ -85,12 +85,18 @@ p {
   font-size: 14px;
 }
 
+.btn-my-dark {
+  background-color: #777873;
+  color: #FFFFFF;
+}
+
+
 .tab-button {
-  color: #302F2B;
+  /* color: #302F2B; */
   font-size: 14px;
 }
 
-.tab-button:hover {
+/* .tab-button:hover {
   color: #A8A9A4;
   text-decoration: none;
 }
@@ -99,7 +105,7 @@ p {
   color: #A8A9A4;
   text-decoration: none;
   background-color: #FFFFFF !important;
-}
+} */
 
 /* a:hover{
   color: #A8A9A4;

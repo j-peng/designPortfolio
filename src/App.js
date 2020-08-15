@@ -9,6 +9,9 @@ import Nav from 'react-bootstrap/Nav'
 import Footer from './components/Footer.js'
 
 import CSAcademy from './components/pages/CSAcademy.js'
+import FlowformSpatula from './components/pages/Flowform.js'
+import PyProjects from './components/pages/Python.js'
+import Semantics from './components/pages/Semantics.js'
 
 import ScrollToTop from './components/ScrollToTop.js'
 
@@ -42,10 +45,26 @@ function App() {
             <About/>
           </Route>
           
+          {/* work */}
           <Route path="/csacademy">
             <ScrollToTop/>
             <CSAcademy/>
           </Route>
+          <Route path="/flowform">
+            <ScrollToTop/>
+            <FlowformSpatula/>
+          </Route>
+          <Route path="/semantics">
+            <ScrollToTop/>
+            <Semantics/>
+          </Route>
+
+          {/* play */}
+          <Route path="/python">
+            <ScrollToTop/>
+            <PyProjects/>
+          </Route>
+
       </Switch>
 
     <Footer/>

@@ -31,8 +31,10 @@ class CSASplashLogin extends React.Component {
                                  how we would expose new users to our company’s unique personality.'/>
             <ContentBlock body='The first interface we began designing to reinvent the color system 
                                 and the style was the splash page and other related sign up/login interfaces. 
-                                To see the live site vist: https://academy.cs.cmu.edu/splash'/>
-            {/* <CustomContent content={<p>hi</p>}/> */}
+                                To see the live site vist:'/>
+            <ContentBlock body=<a class='link' target='_blank'
+                                  href='https://academy.cs.cmu.edu/splash'>https://academy.cs.cmu.edu/splash</a>/>
+
             <Image image={require("../media/splash_1.png")}
                    size={8}
                    caption={'Dektop and mobile splash page above the fold'}
