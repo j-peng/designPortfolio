@@ -27,7 +27,7 @@ class PyProjects extends React.Component {
             
             <Divider size={8}/>
             <SectionTitle name='Unfinished Duck Game'></SectionTitle>
-            <Youtube videoID={'https://youtu.be/kA511VoScaY'}/>
+            <YouTube videoID={'https://youtu.be/kA511VoScaY'}/>
 
             <Divider size={8}/>
             <SectionTitle name='Simply Chess'></SectionTitle>
