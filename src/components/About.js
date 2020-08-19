@@ -51,11 +51,10 @@ class About extends React.Component {
                     <Figure>
                         <Figure.Image
                             alt='A photograph of Janet Peng'
-                            src={require("./media/janet_circle.jpg")}
-                        />
+                            src={require("./media/janet_circle.jpg")}/>
                     </Figure>
-                    <h6 class='py-3'>My name is Janet Peng</h6>
-                    
+
+                    <h6 class='pb-3 align-center'>About me</h6>
                     <SmallContentBlock title="I'm from" body='Toronto, Canada'/>
                     <SmallContentBlock title="Living in" body='Pittsburgh, PA'/>
                     <SmallContentBlock title="Going to" body='Carnegie Mellon University'/>
@@ -70,7 +69,7 @@ class About extends React.Component {
                     <Col md={5}>
                         <h4>Hello!</h4>
                         <p>
-                        I’m a junior studying design at CMU. I like designing experiences 
+                        My name is Janet and I’m a junior studying design at CMU. I like designing experiences 
                         through physical and digital products (and I’m currently wrestling with 
                         which I enjoy more). I believe design can create meaningful change and 
                         that it is our responsibility as designers to create postive impact through 

@@ -31,19 +31,20 @@ class FlowformSpatula extends React.Component {
             
             <TitledContent title='Course'
                            body='Product Design Studio II: Design for Interactions'></TitledContent>
+            
             <div class='pt-3'>
-            <Image image={require("../media/spatula_final_1.jpg")}
-                   size={6}
-                   caption={'3/4 view of flowform spatula'}
-                   altText={'Wooden spatula lying flat on a white background'}/>
-            <Image image={require("../media/spatula_final_2.jpg")}
-                   size={6}
-                   caption={'Flowform spatula on side'}
-                   altText={'Wooden spatula lying sidewats on a white background'}/>
-            <Image image={require("../media/spatula_final_3.jpg")}
-                   size={6}
-                   caption={'Spatula in use in hand'}
-                   altText={'Wooden spatula held in a pan in a kitchen'}/>
+            
+            <ImageLibrary imageList={[ require("../media/spatula_final_1.jpg"),
+                                       require("../media/spatula_final_2.jpg"),
+                                       require("../media/spatula_final_3.jpg") ]}
+                          size={6}
+                          captionList={[ '3/4 view of flowform spatula', 
+                                         'Flowform spatula on side',
+                                         'Spatula in use in hand' ]}
+                          altTextList={[ 'Wooden spatula lying flat on a white background', 
+                                         'Wooden spatula lying sideways on a white background',
+                                         'Wooden spatula held in a pan in a kitchen' ]}/>
+
             </div>
 
             <Divider size={8}/>
@@ -76,21 +77,56 @@ class FlowformSpatula extends React.Component {
                           altTextList={[ '8 figures constructed from roughly drawn curves representing the side view of a spatula', 
                                          'Drawing of a hand gripping the spatula, and doing motions such as flipping and stirring']}/>
             
-            <ContentBlock body=''/>
+            <ContentBlock body='From orthographic views, I transitioned to visualizing my spatula design 
+                                through sketching and physical prototyping. Using pink foam,
+                                I cut out the shape I had designed. I used the band saw to get a better feel
+                                of how cutting the curves felt. I then finished the model with sand paper.
+                                From this first prototype, I realized that the neck of the spatula
+                                had to be wider in order for the object to feel more stable. I also realized
+                                that the head of the spatula could get a lot thinner without feeling
+                                too delicate or brittle. I also took the time to storyboard the
+                                manufacturing process to record how I was planned to make my cuts and 
+                                which sanders I would use with the wood in the future.
+                                '/>
 
             <ImageLibrary imageList={[ require("../media/spatula_process_4.JPG"),
                                    require("../media/spatula_process_5.JPG") ]}
                           size={4}
-                          captionList={[ '', '' ]}
+                          captionList={[ 'First foam prototype', 'First foam prototype' ]}
                           altTextList={[ 'Three quarter view of first foam prototype', 
                                          'Orthographic view of first foam prototype']}/>
+              
+
+            <Image image={require("../media/spatula_process_6.jpg")}
+                            size={8}
+                            caption={'Manufacturing process storyrboard'}
+                            altText='Illustration showing the process of creating a 
+                            spatula by staring with a block of wood, cutting a rough shape on a 
+                            band saw, and sanding it down with various sanders.'/>
 
             <ImageLibrary imageList={[ require("../media/spatula_process_7.JPG"),
                                    require("../media/spatula_process_8.JPG") ]}
                           size={4}
-                          captionList={[ '', '' ]}
+                          captionList={[ 'Second foam prototype', 'Second foam prototype' ]}
                           altTextList={[ 'Three quarter view of second foam prototype', 
                                          'Orthographic view of second foam prototype']}/>
+
+              <ContentBlock body='Using what I had discovered through my first prototype, I began
+                                  sketching out adjustments I wanted to make to my curves. After some
+                                  sketching, I cut another prototype to get a better sense of what
+                                  my final design may look like. From my final foam model to my
+                                  wooden spatula, I wanted to exaggerate the curves further since I 
+                                  thought the wood would be able to handle a more prominent 
+                                  arc in the handle and neck. After making some final tweaks to the
+                                  orthographic views, I used Illustrator and a laser cutter
+                                  to create templates of my orthographic views. With the templates,
+                                  I transfered the initial band saw cut lines onto my block of wood and
+                                  began the manufacturing process.'/>
+
+            <Image image={require("../media/spatula_process_9.jpg")}
+                            size={4}
+                            caption={'Final orthographic views used for templates'}
+                            altText={''}/>
 
         </div>
     )

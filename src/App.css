@@ -80,6 +80,12 @@ h6 {
   font-size: 14px;
 }
 
+.h6 {
+  color: #302F2B;
+  font-size: 14px;
+}
+
+
 p {
   color: #302F2B;
   font-size: 14px;
@@ -89,6 +95,7 @@ p {
   background-color: #777873;
   color: #FFFFFF;
 }
+
 
 
 .tab-button {
@@ -154,3 +161,13 @@ p {
   height: 2px;
   border-width: 2px;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.darknbold {
+  color: #302F2B;
+  font-weight: bold;
+}
+

@@ -13,16 +13,6 @@ import '../App.css';
 class Home extends React.Component {
   constructor(props){
     super(props)
-    this.state = {
-      nameIsJanet : true,
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-  
-  handleClick(){
-    this.setState({
-      nameIsJanet : ! this.state.nameIsJanet,
-    })
   }
 
   render(){
@@ -42,14 +32,14 @@ class Home extends React.Component {
                             card2Info={Array('Book table' , 
                                         'Product Design',
                                           require("./media/cover_booktable.jpg"),
-                                        'http://google.com/' )}>
+                                        '/booktable' )}>
                                         
                 </GalleryRow>
 
                 <GalleryRow card1Info={Array('Single slice toaster' , 
                                         'Product Design',
                                           require("./media/cover_toaster.jpg"),
-                                        'http://google.com/' )}
+                                        '/toaster' )}
                             card2Info={Array('Semantics of form exploration' , 
                                         'Product Design',
                                           require("./media/cover_semantics.jpg"),
@@ -64,7 +54,7 @@ class Home extends React.Component {
                             card2Info={Array('Nourishing our communities + Scheduling our Socials' , 
                                         'Design Research',
                                           require("./media/cover_nocsos.jpg"),
-                                        'http://google.com/' )}>
+                                        '/NOC+SOS' )}>
                                         
                 </GalleryRow>
                 </Container>

@@ -27,18 +27,18 @@ class Play extends React.Component {
                             card2Info={Array('CMU CS Academy Content Development' , 
                                         'Programming',
                                           require("./media/cover_contentdev.png"),
-                                        'http://google.com/' )}>
+                                        '/CSAcontent' )}>
                                         
                 </GalleryRow>
 
                 <GalleryRow card1Info={Array('CMU CS Academy Illustrations' , 
                                         'Illustration',
                                           require("./media/cover_csaillustration.png"),
-                                        'http://google.com/' )}
+                                        '/CSAillustration' )}
                             card2Info={Array('Heart Decisions' , 
                                         'Illustration + Graphic Design',
                                           require("./media/cover_bme.jpg"),
-                                        'http://google.com/' )}>
+                                        '/HeartDecisions' )}>
                                         
                 </GalleryRow>
 

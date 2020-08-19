@@ -3,15 +3,19 @@ import Home from './components/Home.js';
 import Play from './components/Play.js';
 import About from './components/About.js';
 
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-
 import Footer from './components/Footer.js'
+import MyNav from './components/Navbar.js'
 
 import CSAcademy from './components/pages/CSAcademy.js'
 import FlowformSpatula from './components/pages/Flowform.js'
 import PyProjects from './components/pages/Python.js'
 import Semantics from './components/pages/Semantics.js'
+import BookTable from './components/pages/BookTable.js'
+import SingleSliceToaster from './components/pages/Toaster.js'
+import NOCnSOS from './components/pages/NOCnSOS.js'
+import CSAContent from './components/pages/CSAContent.js'
+import CSAIllustration from './components/pages/CSAIllustration.js'
+import HeartDecisions from './components/pages/HeartDecisions.js'
 
 import ScrollToTop from './components/ScrollToTop.js'
 
@@ -22,14 +26,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <Navbar bg="light" variant="light" sticky="top" className='pl-4'>
-        <Navbar.Brand href="#home"><h3>Janet Peng</h3></Navbar.Brand>
-        <Nav className="justify-content-end">
-          <Nav.Link href='/' ><h6>Home</h6></Nav.Link>
-          <Nav.Link href='/play'><h6>Play</h6></Nav.Link>
-          <Nav.Link href='/about'><h6>About</h6></Nav.Link>
-        </Nav>
-      </Navbar>
+      <MyNav currpath={window.location.pathname}/>
 
       <Switch>
           <Route exact path="/">
@@ -46,23 +43,47 @@ function App() {
           </Route>
           
           {/* work */}
-          <Route path="/csacademy">
-            <ScrollToTop/>
-            <CSAcademy/>
-          </Route>
           <Route path="/flowform">
             <ScrollToTop/>
             <FlowformSpatula/>
           </Route>
+          <Route path="/booktable">
+            <ScrollToTop/>
+            <BookTable/>
+          </Route>
+          <Route path="/toaster">
+            <ScrollToTop/>
+            <SingleSliceToaster/>
+          </Route>
           <Route path="/semantics">
             <ScrollToTop/>
             <Semantics/>
+          </Route>
+          <Route path="/csacademy">
+            <ScrollToTop/>
+            <CSAcademy/>
+          </Route>
+          <Route path="/NOC+SOS">
+            <ScrollToTop/>
+            <NOCnSOS/>
           </Route>
 
           {/* play */}
           <Route path="/python">
             <ScrollToTop/>
             <PyProjects/>
+          </Route>
+          <Route path="/CSAcontent">
+            <ScrollToTop/>
+            <CSAContent/>
+          </Route>
+          <Route path='/CSAillustration'>
+            <ScrollToTop/>
+            <CSAIllustration/>
+          </Route>
+          <Route path='/HeartDecisions'>
+            <ScrollToTop/>
+            <HeartDecisions/>
           </Route>
 
       </Switch>

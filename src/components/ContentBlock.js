@@ -82,7 +82,7 @@ class Image extends React.Component {
                 <RViewer options={options} 
                          imageUrls={this.props.image}>
                   <RViewerTrigger>
-                    <Figure class='pb-5'>
+                    <Figure class='pb-5 pointer'>
                       <Figure.Image
                         alt={this.props.altText}
                         src={this.props.image}
@@ -103,6 +103,109 @@ class Image extends React.Component {
   }
 }
 
+class MultiImages extends React.Component {
+  render(){
+    let options = { transition: false, 
+                    navbar: 0, 
+                    title: 0, 
+                    toolbar: { rotateLeft: false, rotateRight: false,
+                              flipHorizontal: false, flipVertical: false,
+                              reset: false, play: false}
+                  }
+
+    let margin = Math.ceil((12 - this.props.size) / 2)
+    let numImages = this.props.imageList.length
+    let single = Math.floor(this.props.size/numImages)
+    if (numImages === 2) {
+    return (
+      <div>
+        <Container>
+          <Row>
+          <Col md={margin}></Col>
+            <Col md={single}>
+              <RViewer options={options} 
+                      imageUrls={this.props.imageList}>
+              <RViewerTrigger>
+                <Figure class='pb-2 pointer'>
+                  <Figure.Image alt={this.props.altTextList[0]}
+                                src={this.props.imageList[0]}/>
+                </Figure>
+              </RViewerTrigger>
+              </RViewer>
+            </Col>
+            <Col md={single}>
+              <RViewer options={options} 
+                      imageUrls={this.props.imageList}>
+              <RViewerTrigger>
+                <Figure class='pb-2 pointer'>
+                  <Figure.Image alt={this.props.altTextList[1]}
+                                src={this.props.imageList[1]}/>
+                </Figure>
+              </RViewerTrigger>
+              </RViewer>
+              <p class='align-center caption'>{this.props.caption}</p>
+            </Col>
+          </Row>
+          <Row><Col md={margin}/>
+                <Col md={this.props.size}>
+                  <p class='align-center caption'>{this.props.caption}</p>
+                </Col>
+              </Row>
+        </Container>
+      </div>
+      )
+      } else if (numImages === 3) {
+        return (
+          <div>
+            <Container>
+              <Row>
+              <Col md={margin}></Col>
+                <Col md={single}>
+                  <RViewer options={options} 
+                          imageUrls={this.props.imageList}>
+                  <RViewerTrigger>
+                    <Figure class='pb-2 pointer'>
+                      <Figure.Image alt={this.props.altTextList[0]}
+                                    src={this.props.imageList[0]}/>
+                    </Figure>
+                  </RViewerTrigger>
+                  </RViewer>
+                </Col>
+                <Col md={single}>
+                  <RViewer options={options} 
+                          imageUrls={this.props.imageList}>
+                  <RViewerTrigger>
+                    <Figure class='pb-2 pointer'>
+                      <Figure.Image alt={this.props.altTextList[1]}
+                                    src={this.props.imageList[1]}/>
+                    </Figure>
+                  </RViewerTrigger>
+                  </RViewer>
+                </Col>
+                <Col md={single}>
+                  <RViewer options={options} 
+                          imageUrls={this.props.imageList}>
+                  <RViewerTrigger>
+                    <Figure class='pb-2 pointer'>
+                      <Figure.Image alt={this.props.altTextList[2]}
+                                    src={this.props.imageList[2]}/>
+                    </Figure>
+                  </RViewerTrigger>
+                  </RViewer>
+                </Col>
+              </Row>
+              <Row><Col md={margin}/>
+                <Col md={this.props.size}>
+                  <p class='align-center caption'>{this.props.caption}</p>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        )
+      }
+  }
+}
+
 class ImageLibrary extends React.Component {
   makeImage(){
     let result = []
@@ -114,15 +217,15 @@ class ImageLibrary extends React.Component {
                                 reset: false, play: false}
                     }
     let margin = Math.floor((12 - this.props.size) / 2)
-
+    let imgList = this.props.imageList.slice()
     for (var i=0; i < this.props.imageList.length; i++) {
       result.push(<Row>
                     <Col md={margin}></Col>
                     <Col md={this.props.size}>
                       <RViewer options={myOptions} 
-                              imageUrls={this.props.imageList}>
+                              imageUrls={imgList}>
                       <RViewerTrigger>
-                        <Figure class='pb-5'>
+                        <Figure class='pb-5 pointer'>
                           <Figure.Image alt={this.props.altTextList[i]}
                                         src={this.props.imageList[i]}/>
                           <Figure.Caption class='align-center caption'>
@@ -132,7 +235,11 @@ class ImageLibrary extends React.Component {
                       </RViewerTrigger>
                       </RViewer>
                     </Col>
-                  </Row>)}
+                  </Row>)
+        let firstImg = imgList[0]
+        imgList = imgList.slice(1)
+        imgList.push(firstImg)
+      }
     
     return(
       <div>
@@ -177,16 +284,39 @@ class SmallContentBlock extends React.Component {
   render(){
     return (
       <Row class='pt-4'>
-        <Col md={4}>
-          <h6 class='align-right'>{this.props.title}</h6>
-        </Col>
-        <Col>
-          <p>{this.props.body}</p>
-        </Col>
+          <p><span class='h6'>{this.props.title}</span> {this.props.body}</p>
       </Row>
     )
   }
 }
 
+class YTVid extends React.Component {
+  render(){
+    let margin = Math.floor((12 - this.props.size) / 2)
+    let source = "https://www.youtube.com/embed/"  + this.props.ytid
+    let w = Math.floor(window.innerWidth/12) * this.props.size
+    let h = w * 0.6
+    return (
+    <div>
+      <Container>
+      <Row class='pt-4'>
+        <Col md={margin}></Col>
+        <Col md={this.props.size}>
+          <iframe id="ytplayer" type="text/html"
+                  src={source}
+                  frameborder="0"
+                  allowfullscreen="allowfullscreen"
+                  width = {w}
+                  height = {h}></iframe>
+          <p class='caption'>{this.props.caption}</p>
+        </Col>
+        </Row>
+        </Container>
+    </div>
+    )
+  }
+}
+
 export default TitledContent;
-export {ContentBlock, CustomContent, Image, ImageLibrary, Divider, SmallContentBlock};
+export { ContentBlock, CustomContent, Image, ImageLibrary, Divider, SmallContentBlock, 
+         YTVid, MultiImages };
