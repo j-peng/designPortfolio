@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 
 import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, YTVid} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer, MultiImages} from '../ContentBlock.js'
+import Toggle from '../InPageToggle.js'
 
 import { Link, animateScroll as scroll } from "react-scroll";
 
@@ -18,6 +18,7 @@ class Semantics extends React.Component {
   constructor(props){
         super(props)
         this.state = {
+          tabs: ['Wood and rubber', 'Water vessel', 'Similar but different'],
           tabStates: [ true, false, false ],
         }
         this.handleClick = this.handleClick.bind(this)
@@ -59,16 +60,17 @@ class Semantics extends React.Component {
             <TitledContent title='Course'
                            body= 'Product Studio I:  Understanding Form & Context'/>
             
-            <div class='pt-5' name='top-tabs'>
-            <SemToggle onClick={i => this.handleClick(i)}
-                       break={2}
-                       tabStates={this.state.tabStates}/>
+            <div>
+            <Toggle tabs = {this.state.tabs}
+                    break={'bottom'}
+                    tabStates={this.state.tabStates}
+                    onClick={i => this.handleClick(i)}/>
             {page}
-            <SemToggle onClick={i => this.handleClick(i)}
-                       break={1}
-                       tabStates={this.state.tabStates}/>
-            
-        </div>       
+            <Toggle tabs = {this.state.tabs}
+                    break={'top'}
+                    tabStates={this.state.tabStates}
+                    onClick={i => this.handleClick(i)}/>
+            </div>       
         </div>
     )
   }
@@ -94,7 +96,7 @@ class WoodNRubber extends React.Component {
                                     shaped, and smoothed using sandpaper."/>
                 <TitledContent title='Duration'
                                body= '4 weeks'/>
-
+                <Spacer size={2}/>
                 <ImageLibrary imageList={[ require("../media/woodnrubber_final_1.JPG"),
                                            require("../media/woodnrubber_final_2.JPG"),
                                            require("../media/woodnrubber_final_3.JPG"),
@@ -110,9 +112,40 @@ class WoodNRubber extends React.Component {
 
                 <Divider size={6}/>
                 <TitledContent title='Process'
-                               body= ''/>
+                               body= 'I started by familiarizing myself with the different
+                               amounts of stretch and tension different rubber bands
+                               afforded. With more information about the behaviors of the 
+                               rubber bands provided, I began exploring some possible 
+                               interactions throuh sketching and rapid prototyping with 
+                               foam core. I considered pushing, pulling, squeezing, twisting,
+                               slapping, chopping, and a combination of them.
+                               After, I began making models out of wood to familiarize
+                               myself with the material. The interaction I chose
+                               was one of the simplist of all the interactions I experimented with.
+                               This was because it game the most satisfying effect when completed.
+                               I then finalized my working model and began sketching plans for the
+                               form. Most of my initial ideation was based off of a piece of clay
+                               I squeezed in my deisred grip. That form was inspired by
+                               the proportions of the clay and the dimensions of my fingers.
+                               From sketches I made quick physical models out of blue foam
+                               and floral foam. I finished multiple blue foam models with paint
+                               and spackle to get a better sense of how long the process took
+                               and how it effected the form of the model.'/>
+                <Spacer size={2}/>
                 <YTVid ytid='jgTWmM7sVBc' size={6} caption='Process models'/>
-                
+                <ContentBlock body='One decision I struggled with a lot was the design of the 
+                "buttons", or where the fingers gripped the artifact.
+                I wanted to keep them subtle so that the focused was kept on the triangular
+                body but I also wanted them to call enough attention to tell the user to
+                hold the object in that way. I also struggled with visual cues to show which
+                side was the "top" and the "bottom". Ultimately, the buttons became soft indents
+                on the sides that followed the curve of the form and the roundedness and flatness
+                of the largest surfaces demonstrated which was the top and bottom.'/>
+                <MultiImages imageList={[ require("../media/woodnrubber_process_1.jpg"), 
+                                          require("../media/woodnrubber_process_2.jpg") ]}
+                             size={8}
+                             caption='Illustrator drawings of the form model'
+                             altTextList={ ['', '', ''] }/>
             </div>
         )
     }
@@ -122,23 +155,53 @@ class WaterVessel extends React.Component {
     render(){
         return(
             <div>
-                <SectionTitle name='1.5L Water Vessel'></SectionTitle>
+                <SectionTitle name='Water Vessel'></SectionTitle>
                 <TitledContent title='Description'
                                body= 'Design a container to hold at most 1.5L of liquid
-                                      inspired by three randomly selected words. Consider
-                                      how liquid is collected, moved, and dispensed from
-                                      the vessel. The words used are heavy, soft, dynamic.
+                                      inspired by three randomly selected words:
+                                      heavy, soft, dynamic. Consider how liquid is collected, 
+                                      moved, and dispensed from the vessel.
                                       Liquid enters from the top and is dispensed using the pump.'/>
                 <TitledContent title='Duration'
                                body= '3 weeks'/>
 
-                <YTVid ytid='knT_hYtd51E' size={6}/>
+                <ImageLibrary imageList={[ require("../media/watervessel_final_1.JPG"),
+                                           require("../media/watervessel_final_2.JPG"),
+                                           require("../media/watervessel_final_3.JPG") ]}
+                          size={6}
+                          captionList={[ '3/4 view from front', 
+                                         '3/4 view from back', 'Vessel in use' ]}
+                          altTextList={[ '', '', '' ]}/>
+
+                <Spacer size={2}/>
+                <YTVid ytid='knT_hYtd51E' size={6} caption='Vessel form and interactions'/>
 
                 <Divider size={6}/>
 
                 <TitledContent title='Process'
-                               body= ''/>
+                               body= 'I started the process by brainstorming the kinds of interactions
+                               I associated with my words. From there, I began turning the interactions
+                               into forms that I thought would encourage those interactions. Through
+                               sketching and rough rapid prototyping with scaled down foam models, I
+                               planned out my final design. Using illustrator, I made templates
+                               to help me cut and shape my water vessel model.'/>
+
+                <MultiImages imageList={[ require("../media/watervessel_process_1.jpg"), 
+                                          require("../media/watervessel_process_2.jpg"),
+                                          require("../media/watervessel_process_3.jpg") ]}
+                             size={9}
+                             caption='Sketchbook pages'
+                             altTextList={ ['', '', ''] }/>
+
+                <Spacer size={2}/>
                 <YTVid ytid='3sbLJrb2fJQ' size={6}/>
+
+                <MultiImages imageList={[ require("../media/watervessel_process_4.jpg"), 
+                                          require("../media/watervessel_process_5.jpg") ]}
+                             size={8}
+                             caption='Illustrator drawings of form and interaction'
+                             altTextList={ ['', ''] }/>
+
             </div>
         )
     }
@@ -148,7 +211,7 @@ class SimNDiff extends React.Component {
     render(){
         return(
             <div>
-                <SectionTitle name='Similar But Different'></SectionTitle>
+                <SectionTitle name='Similar but Different'></SectionTitle>
                 <TitledContent title='Description'
                                body= 'Craft primitive forms with various materials that assist 
                                       the same interaction. 
@@ -157,65 +220,15 @@ class SimNDiff extends React.Component {
                                       slightly different.'/>
                 <TitledContent title='Duration'
                                body= '2 weeks'/>
-
-                <Divider size={6}/>
-
-                <TitledContent title='Process'
-                               body= ''/>
+                
+                <MultiImages imageList={[ require("../media/simbutdiff_final_1.JPG"), 
+                                          require("../media/simbutdiff_final_2.JPG") ]}
+                             size={8}
+                             caption='Left to Right: squeezed clay, foam core rectangular prism, blue foam cylinder, clay ellipsoid'
+                             altTextList={ ['', ''] }/>
+                <Spacer size={3}/>
+                <YTVid ytid='nYtxseaR3SU' size={6} caption='Interactions with models'/>
             </div>
-        )
-    }
-}
-
-class SemToggle extends React.Component {
-    render(){
-        const line = <hr class='soft-break'></hr>
-        const empty = <div></div>
-        let top = empty
-        let bottom = empty
-        if (this.props.break === 1) {top = line}
-        else if (this.props.break === 2) {bottom = line}
-
-        let var1 = 'light'
-        let var2 = 'light'
-        let var3 = 'light'
-
-        if (this.props.tabStates[0]){ var1 = 'my-dark'}
-        else if (this.props.tabStates[1]){ var2 = 'my-dark'}
-        else { var3 = 'my-dark'}
-
-        return (
-        <div>
-            <Container>
-                <Row>
-                    <Col md={2}></Col>
-
-                    <Col md={8}>
-                        {top}
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={800}> 
-                            <Button onClick = {() => this.props.onClick(0)}
-                                    className='tab-button'
-                                    variant={var1}>Wood and Rubber</Button>
-                        </Link>
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={1000}> 
-                            <Button onClick = {() => this.props.onClick(1)} 
-                                    className='tab-button'
-                                    variant={var2}>Water Vessel</Button>
-                        </Link>
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={800}> 
-                            <Button onClick = {() => this.props.onClick(2)}
-                                    className='tab-button'
-                                    variant={var3}>Similar but Different</Button>
-                        </Link>
-
-                        {bottom}
-                    </Col>
-                </Row>
-            </Container>
-        </div>
         )
     }
 }

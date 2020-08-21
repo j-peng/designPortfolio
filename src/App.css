@@ -99,8 +99,10 @@ p {
 
 
 .tab-button {
-  /* color: #302F2B; */
+  color: #777873 !important;
   font-size: 14px;
+  padding-right: 20px;
+  cursor: pointer;
 }
 
 /* .tab-button:hover {
@@ -167,7 +169,7 @@ p {
 }
 
 .darknbold {
-  color: #302F2B;
+  color: #302F2B !important;
   font-weight: bold;
 }
 

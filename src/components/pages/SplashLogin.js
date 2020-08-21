@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
 import {ContentBlock, Image, Divider} from '../ContentBlock.js'
+import { Link } from "react-router-dom";
 
 import '../../App.css';
 
@@ -103,6 +104,12 @@ class CSASplashLogin extends React.Component {
                    size={6}
                    caption={'Selection or color palette exploration'}
                    altText={'15 color palette variations many consisting of the color purple'}/>
+            <ContentBlock body='To finish up the splash page we made various icons and illustrations
+                                to match our new colors and syle. These gave the page a friendlier feel
+                                which we thought fit well with the playfulness of CS Academy. See more
+                                about the process behind the illustrations:'/>
+            <ContentBlock body=<Link class='link' target='_blank'
+                                  to='/CSAillustration'>CS Academy Illustrations</Link>/>
             <ContentBlock body='After Finishing up the splash page, we began to build out 
                                 styled components for other related pages, such as the login 
                                 and sign up pages. To make the login and sign up experience 

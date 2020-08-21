@@ -29,15 +29,15 @@ class AboveFold extends React.Component {
                 </h2>
               </Col>
               <Col>
-                <p>I'm interested in designing experiences, especially if they are 
+                <p>I love designing experiences, especially if they are 
                    supported by physical products. When designing, I like to consider 
                    how my designs may complement the larger system. I believe in 
-                   user-centered design and user testing and research is a large 
-                   part of my design process.
+                   user-centered design and user testing + research so I make
+                   it a large part of my design process.
                 </p>
                 <p>
-                  Besides design, I love exploring new skills such as programming, 
-                  illustration, photography, and baking. I love technology and 
+                  Besides design, I enjoy exploring new skills such as programming, 
+                  illustration, photography, and baking. I am interested in technology and 
                   am persuing a minor in Computer Science.
                 </p>
               </Col>

@@ -17,7 +17,7 @@ class About extends React.Component {
             "This website's color scheme is based off of warm grey copics.",
             'My favorite YouTube channels include Kurzgesagt, CGP Grey, and SORTEDfood.',
             'My favorite singers include Quinn XCII, Ed Sheeran, and Greyson Chance.',
-            'My default answer for favorite ice cream flavor is Ben and Jerry’s red velvet although I’ve only had it once. I can’t find it in stores anymore :(',
+            'My default answer for favorite ice cream flavor is Ben and Jerry’s red velvet although I’ve only had it once. I can’t find it in stores anymore.',
             'I went to University of Toronto School for high school. It is not a university (I get asked a lot).',
             'In high school I wanted to be a mechanical engineer. I then realized what I thought was a mechanical engineering was closer to industrial design.',
             'I played chess completitivly. I got to represent Canada at the World Youth Under 16 Chess Olympiad. My USCF rating is 1859.',

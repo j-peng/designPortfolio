@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
 
 import { RViewer, RViewerTrigger } from 'react-viewerjs'
+// import { Document, Page } from 'react-pdf';
 
 class TitledContent extends React.Component {
   render(){
@@ -53,8 +54,6 @@ class CustomContent extends React.Component {
                 <Col md={4}></Col>
                 <Col md={5}>
                     {this.props.content}
-                    {console.log(this.props.content)}
-                    {console.log('hi')}
                 </Col>
             </Row>
         </Container>
@@ -82,7 +81,7 @@ class Image extends React.Component {
                 <RViewer options={options} 
                          imageUrls={this.props.image}>
                   <RViewerTrigger>
-                    <Figure class='pb-5 pointer'>
+                    <Figure class='pb-3 pointer'>
                       <Figure.Image
                         alt={this.props.altText}
                         src={this.props.image}
@@ -117,6 +116,10 @@ class MultiImages extends React.Component {
     let numImages = this.props.imageList.length
     let single = Math.floor(this.props.size/numImages)
     if (numImages === 2) {
+      let imgList = this.props.imageList.slice()
+      let firstImg = imgList[0]
+      imgList = imgList.slice(1)
+      imgList.push(firstImg)
     return (
       <div>
         <Container>
@@ -135,7 +138,7 @@ class MultiImages extends React.Component {
             </Col>
             <Col md={single}>
               <RViewer options={options} 
-                      imageUrls={this.props.imageList}>
+                      imageUrls={imgList}>
               <RViewerTrigger>
                 <Figure class='pb-2 pointer'>
                   <Figure.Image alt={this.props.altTextList[1]}
@@ -143,7 +146,6 @@ class MultiImages extends React.Component {
                 </Figure>
               </RViewerTrigger>
               </RViewer>
-              <p class='align-center caption'>{this.props.caption}</p>
             </Col>
           </Row>
           <Row><Col md={margin}/>
@@ -155,6 +157,14 @@ class MultiImages extends React.Component {
       </div>
       )
       } else if (numImages === 3) {
+        let imgList2 = this.props.imageList.slice()
+        let imgList3 = this.props.imageList.slice()
+        let firstImg = imgList2[0]
+        let secondImg = imgList2[1]
+        imgList2 = imgList2.slice(1)
+        imgList3 = imgList3.slice(2)
+        imgList2.push(firstImg)
+        imgList3.push(firstImg, secondImg)
         return (
           <div>
             <Container>
@@ -173,7 +183,7 @@ class MultiImages extends React.Component {
                 </Col>
                 <Col md={single}>
                   <RViewer options={options} 
-                          imageUrls={this.props.imageList}>
+                          imageUrls={imgList2}>
                   <RViewerTrigger>
                     <Figure class='pb-2 pointer'>
                       <Figure.Image alt={this.props.altTextList[1]}
@@ -184,7 +194,7 @@ class MultiImages extends React.Component {
                 </Col>
                 <Col md={single}>
                   <RViewer options={options} 
-                          imageUrls={this.props.imageList}>
+                          imageUrls={imgList3}>
                   <RViewerTrigger>
                     <Figure class='pb-2 pointer'>
                       <Figure.Image alt={this.props.altTextList[2]}
@@ -225,7 +235,7 @@ class ImageLibrary extends React.Component {
                       <RViewer options={myOptions} 
                               imageUrls={imgList}>
                       <RViewerTrigger>
-                        <Figure class='pb-5 pointer'>
+                        <Figure class='pb-3 pointer'>
                           <Figure.Image alt={this.props.altTextList[i]}
                                         src={this.props.imageList[i]}/>
                           <Figure.Caption class='align-center caption'>
@@ -317,6 +327,57 @@ class YTVid extends React.Component {
   }
 }
 
+class Spacer extends React.Component {
+  render(){
+    return (
+    <div class={'py-' + this.props.size}>
+    </div>
+    )
+  }
+}
+
+class PDF extends React.Component {
+  render(){
+    let margin = Math.floor((12 - this.props.size) / 2)
+    let w = Math.floor(window.innerWidth/12) * this.props.size
+    let h = w * this.props.ratio
+    return(
+      <Container>
+        <Row>
+          <Col md={margin}/>
+          <Col md={this.props.size}>
+            <embed class='pb-3' src= {this.props.file} width={w} height={h}></embed>
+          </Col>
+        </Row>
+      </Container>
+    )
+  }
+}
+
+// class PDFViewer extends React.Component {
+//   render(){
+//     const numPages = this.props.numPages
+//     const setNumPages = null;
+//     const pageNumber = 1
+//     const setPageNumber = 1;
+   
+//     function onDocumentLoadSuccess({ numPages }) {
+//       setNumPages(numPages);
+//     }
+//     return (
+//       <div>
+//         <Document
+//           file={this.props.file}
+//           onLoadSuccess={onDocumentLoadSuccess}>
+//           <Page pageNumber={pageNumber} />
+//         </Document>
+//         <p>Page {pageNumber} of {numPages}</p>
+//       </div>
+//     )
+//   }
+// }
+
+
 export default TitledContent;
 export { ContentBlock, CustomContent, Image, ImageLibrary, Divider, SmallContentBlock, 
-         YTVid, MultiImages };
+         YTVid, MultiImages, Spacer, PDF };

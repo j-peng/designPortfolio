@@ -11,7 +11,7 @@ class MyNav extends React.Component {
     render(){
         return (
             <Navbar bg="light" variant="light" sticky="top" className='pl-4'>
-            <Navbar.Brand href="#home"><h3>Janet Peng</h3></Navbar.Brand>
+            <Navbar.Brand href='/'><h3>Janet Peng</h3></Navbar.Brand>
             <Nav className="justify-content-end">
             <Nav.Link href='/'>
                 <h6 class={(this.props.currpath === '/') ? 'darknbold' : ''}>Home</h6></Nav.Link>

@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 
 import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
+
+import Toggle from '../InPageToggle.js'
 
 import CSASplashLogin from './SplashLogin.js'
 import DocsColors from './DocsColors.js'
@@ -21,6 +22,7 @@ class CSAcademy extends React.Component {
   constructor(props){
         super(props)
         this.state = {
+          tabs: ['Exercise interface', 'Splash + login', 'Docs + colors'],
           tabStates: [ true, false, false ],
         }
         this.handleClick = this.handleClick.bind(this)
@@ -61,73 +63,20 @@ class CSAcademy extends React.Component {
             <TitledContent title='Duration'
                            body='July 2019 - Present'></TitledContent>
             
-            <div class='pt-5' name='top-tabs'>
-            <CSAToggle onClick={i => this.handleClick(i)}
-                       break={2}
-                       tabStates={this.state.tabStates}/>
+            <div>
+            <Toggle tabs = {this.state.tabs}
+                    break={'bottom'}
+                    tabStates={this.state.tabStates}
+                    onClick={i => this.handleClick(i)}/>
             {page}
-            <CSAToggle onClick={i => this.handleClick(i)}
-                       break={1}
-                       tabStates={this.state.tabStates}/>
-            
-        </div>       
+            <Toggle tabs = {this.state.tabs}
+                    break={'top'}
+                    tabStates={this.state.tabStates}
+                    onClick={i => this.handleClick(i)}/>
+            </div>       
         </div>
     )
   }
-}
-
-
-class CSAToggle extends React.Component {
-    render(){
-        const line = <hr class='soft-break'></hr>
-        const empty = <div></div>
-        let top = empty
-        let bottom = empty
-        if (this.props.break === 1) {top = line}
-        else if (this.props.break === 2) {bottom = line}
-
-        let var1 = 'light'
-        let var2 = 'light'
-        let var3 = 'light'
-
-        if (this.props.tabStates[0]){ var1 = 'my-dark'}
-        else if (this.props.tabStates[1]){ var2 = 'my-dark'}
-        else { var3 = 'my-dark'}
-
-        return (
-        <div>
-            <Container>
-                <Row>
-                    <Col md={2}></Col>
-
-                    <Col md={8}>
-                        {top}
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={800}> 
-                            <Button onClick = {() => this.props.onClick(0)}
-                                    className='tab-button'
-                                    variant={var1}>Exercise Interface</Button>
-                        </Link>
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={1000}> 
-                            <Button onClick = {() => this.props.onClick(1)} 
-                                    className='tab-button'
-                                    variant={var2}>Splash Page + Login</Button>
-                        </Link>
-
-                        <Link activeClass="active" to="top-tabs" spy={true} smooth={true} duration={800}> 
-                            <Button onClick = {() => this.props.onClick(2)}
-                                    className='tab-button'
-                                    variant={var3}>Docs + Colors</Button>
-                        </Link>
-
-                        {bottom}
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-        )
-    }
 }
 
 export default CSAcademy;
