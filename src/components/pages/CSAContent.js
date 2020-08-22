@@ -31,7 +31,7 @@ class CSAContent extends React.Component {
                         require("../media/csa_sunset.gif"),
                         require("../media/csa_urban.gif") ]}
                         size={6}
-                        caption="Doctor's guide - information to reference during the card game"
+                        caption="Procedural animations"
                         altTextList={ ['', '', ''] }/>
         </div>
     )
