@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer} from '../ContentBlock.js'
 
 import '../../App.css';
 
@@ -32,6 +32,20 @@ class CSAContent extends React.Component {
                         require("../media/csa_urban.gif") ]}
                         size={6}
                         caption="Procedural animations"
+                        altTextList={ ['', '', ''] }/>
+            <Spacer size={2}/>
+            <MultiImages imageList={[ require("../media/csa_poly_1.png"), 
+                        require("../media/csa_poly_2.png"),
+                        require("../media/csa_poly_3.png") ]}
+                        size={6}
+                        caption="Procedurally generated geometric forms"
+                        altTextList={ ['', '', ''] }/>
+            <Spacer size={2}/>
+            <MultiImages imageList={[ require("../media/csa_cells_1.png"), 
+                        require("../media/csa_cells_2.png"),
+                        require("../media/csa_cells_3.png") ]}
+                        size={6}
+                        caption="Procedurally generated cell pattern"
                         altTextList={ ['', '', ''] }/>
         </div>
     )

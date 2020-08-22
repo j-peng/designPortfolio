@@ -1,7 +1,6 @@
 import React from 'react';
 
 import GalleryCard from './Card.js'
-import GalleryRow from './GalleryRow.js'
 import SectionTitle from './SectionTitle.js'
 import TitledContent from './ContentBlock.js'
 
@@ -20,28 +19,41 @@ class Play extends React.Component {
               {/* gallery */}
               <SectionTitle name='Play'></SectionTitle>
               <Container name="top" fluid="md">
-                <GalleryRow card1Info={Array('Python Coding Projects' , 
-                                        'Programming',
-                                          require("./media/cover_python.png"),
-                                        '/python' )}
-                            card2Info={Array('CMU CS Academy Content Development' , 
-                                        'Programming',
-                                          require("./media/cover_contentdev.png"),
-                                        '/CSAcontent' )}>
-                                        
-                </GalleryRow>
+                  <Row>
+                    <Col md={2}></Col>
+                    <Col md={5}>
+                      <GalleryCard title={'Python Coding Projects'}
+                                  category={'Programming'}
+                                  img={require("./media/cover_python.png")}
+                                  path={'/python'}>
+                      </GalleryCard>
+                    </Col>
+                    <Col md={5}>
+                      <GalleryCard title={'CMU CS Academy Content Development'}
+                                category={'Programming'}
+                                img={require("./media/cover_contentdev.png")}
+                                path={'/CSAcontent'}>
+                      </GalleryCard>
+                    </Col>
+                  </Row>
 
-                <GalleryRow card1Info={Array('CMU CS Academy Illustrations' , 
-                                        'Illustration',
-                                          require("./media/cover_csaillustration.png"),
-                                        '/CSAillustration' )}
-                            card2Info={Array('Heart Decisions' , 
-                                        'Illustration + Graphic Design',
-                                          require("./media/cover_bme.jpg"),
-                                        '/HeartDecisions' )}>
-                                        
-                </GalleryRow>
-
+                  <Row>
+                  <Col md={2}></Col>
+                  <Col md={5}>
+                    <GalleryCard title={'CMU CS Academy Illustrations'}
+                                category={'Illustration'}
+                                img={require("./media/cover_csaillustration.png")}
+                                path={'/CSAillustration'}>
+                    </GalleryCard>
+                  </Col>
+                  <Col md={5}>
+                    <GalleryCard title={'Heart Decisions'}
+                              category={'Illustration + Graphic Design'}
+                              img={require("./media/cover_bme.jpg")}
+                              path={'/HeartDecisions'}>
+                    </GalleryCard>
+                  </Col>
+                  </Row>
               </Container>
           </div>
     )

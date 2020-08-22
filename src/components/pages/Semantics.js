@@ -107,8 +107,8 @@ class WoodNRubber extends React.Component {
                                          'Wood and rubber working model and grip' ]}
                           altTextList={[ '', '', '', '' ]}/>
 
-                <YTVid ytid='rsh5FJ4np0E' size={6} caption='Form model interaction'/>
-                <YTVid ytid='_ADMnL9W-Ek' size={6} caption='Working model interaction'/>
+                <YTVid ytid='rsh5FJ4np0E' size={4} caption='Form model interaction'/>
+                <YTVid ytid='_ADMnL9W-Ek' size={4} caption='Working model interaction'/>
 
                 <Divider size={6}/>
                 <TitledContent title='Process'
@@ -132,7 +132,7 @@ class WoodNRubber extends React.Component {
                                and spackle to get a better sense of how long the process took
                                and how it effected the form of the model.'/>
                 <Spacer size={2}/>
-                <YTVid ytid='jgTWmM7sVBc' size={6} caption='Process models'/>
+                <YTVid ytid='jgTWmM7sVBc' size={4} caption='Process models'/>
                 <ContentBlock body='One decision I struggled with a lot was the design of the 
                 "buttons", or where the fingers gripped the artifact.
                 I wanted to keep them subtle so that the focused was kept on the triangular
@@ -174,7 +174,7 @@ class WaterVessel extends React.Component {
                           altTextList={[ '', '', '' ]}/>
 
                 <Spacer size={2}/>
-                <YTVid ytid='knT_hYtd51E' size={6} caption='Vessel form and interactions'/>
+                <YTVid ytid='knT_hYtd51E' size={4} caption='Vessel form and interactions'/>
 
                 <Divider size={6}/>
 
@@ -194,7 +194,7 @@ class WaterVessel extends React.Component {
                              altTextList={ ['', '', ''] }/>
 
                 <Spacer size={2}/>
-                <YTVid ytid='3sbLJrb2fJQ' size={6}/>
+                <YTVid ytid='3sbLJrb2fJQ' size={4}/>
 
                 <MultiImages imageList={[ require("../media/watervessel_process_4.jpg"), 
                                           require("../media/watervessel_process_5.jpg") ]}
@@ -227,7 +227,7 @@ class SimNDiff extends React.Component {
                              caption='Left to Right: squeezed clay, foam core rectangular prism, blue foam cylinder, clay ellipsoid'
                              altTextList={ ['', ''] }/>
                 <Spacer size={3}/>
-                <YTVid ytid='nYtxseaR3SU' size={6} caption='Interactions with models'/>
+                <YTVid ytid='nYtxseaR3SU' size={4} caption='Interactions with models'/>
             </div>
         )
     }

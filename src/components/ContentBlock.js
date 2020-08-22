@@ -9,7 +9,40 @@ import { RViewer, RViewerTrigger } from 'react-viewerjs'
 // import { Document, Page } from 'react-pdf';
 
 class TitledContent extends React.Component {
-  render(){
+  constructor() {
+    super();
+    this.state = {
+      width: window.innerWidth,
+    };
+  }
+  
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange)
+  }
+  
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth })
+  };
+  
+  render() {
+    const width = this.state.width
+    const isMobile = width <= 700
+
+    if (isMobile) {
+      return(
+        <div>
+          <Container>
+            <h5>{this.props.title}</h5>
+            <p>{this.props.body}</p>
+          </Container>
+        </div>
+      )
+    } else {
+
     return (
       <div>
         <Container>
@@ -25,13 +58,14 @@ class TitledContent extends React.Component {
         </Container>
       </div>
     )
+    }
   }
 }
 
 class ContentBlock extends React.Component {
   render(){
     return (
-      <div>
+      <div class='py-2'>
         <Container>
             <Row>
                 <Col md={4}></Col>
@@ -294,36 +328,75 @@ class SmallContentBlock extends React.Component {
   render(){
     return (
       <Row class='pt-4'>
-          <p><span class='h6'>{this.props.title}</span> {this.props.body}</p>
+          <p class='pl-3'><span class='h6'>{this.props.title}</span> {this.props.body}</p>
       </Row>
     )
   }
 }
 
 class YTVid extends React.Component {
-  render(){
-    let margin = Math.floor((12 - this.props.size) / 2)
+  constructor() {
+    super();
+    this.state = {
+      width: window.innerWidth,
+    };
+  }
+  
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange)
+  }
+  
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth })
+  };
+  
+  render() {
+    const width = this.state.width
+    const isMobile = width <= 700
     let source = "https://www.youtube.com/embed/"  + this.props.ytid
-    let w = Math.floor(window.innerWidth/12) * this.props.size
-    let h = w * 0.6
-    return (
-    <div>
-      <Container>
-      <Row class='pt-4'>
-        <Col md={margin}></Col>
-        <Col md={this.props.size}>
-          <iframe id="ytplayer" type="text/html"
-                  src={source}
-                  frameborder="0"
-                  allowfullscreen="allowfullscreen"
-                  width = {w}
-                  height = {h}></iframe>
-          <p class='caption'>{this.props.caption}</p>
-        </Col>
-        </Row>
-        </Container>
-    </div>
-    )
+
+    if (isMobile) {
+      let w = this.state.width * 0.9
+      let h = w * 0.6
+      return(
+        <div>
+          <Container>
+            <iframe id="ytplayer" type="text/html"
+                        src={source}
+                        frameborder="0"
+                        allowfullscreen="allowfullscreen"
+                        width = {w}
+                        height = {h}></iframe>
+            <p class='caption'>{this.props.caption}</p>
+          </Container>
+        </div>
+      )
+    } else {
+      let margin = Math.floor((12 - this.props.size) / 2)
+      let w = Math.floor(this.state.width/12) * this.props.size
+      let h = w * 0.6
+      return (
+      <div>
+        <Container>
+        <Row class='pt-4'>
+          <Col md={margin}></Col>
+          <Col md={this.props.size}>
+            <iframe id="ytplayer" type="text/html"
+                    src={source}
+                    frameborder="0"
+                    allowfullscreen="allowfullscreen"
+                    width = {w}
+                    height = {h}></iframe>
+            <p class='caption'>{this.props.caption}</p>
+          </Col>
+          </Row>
+          </Container>
+      </div>)
+    }
   }
 }
 

@@ -32,7 +32,7 @@ class CSASplashLogin extends React.Component {
                                  how we would expose new users to our company’s unique personality.'/>
             <ContentBlock body='The first interface we began designing to reinvent the color system 
                                 and the style was the splash page and other related sign up/login interfaces. 
-                                To see the live site vist:'/>
+                                To see the live site visit:'/>
             <ContentBlock body=<a class='link' target='_blank'
                                   href='https://academy.cs.cmu.edu/splash'>https://academy.cs.cmu.edu/splash</a>/>
 
@@ -85,7 +85,7 @@ class CSASplashLogin extends React.Component {
                                 add color and more deliberate styling to the page to better 
                                 reflect the CMU CS Academy voice.'/>
             <ContentBlock body='Before stylizing, we put together a list of words that helped us 
-                                all understand our company: playful, professional, incluzive, 
+                                all understand our company: playful, professional, inclusive, 
                                 engaging, confident'/>
             <Image image={require("../media/splash_5.png")}
                    size={8}
