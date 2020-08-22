@@ -48,13 +48,21 @@ class SingleSliceToaster extends React.Component {
               <MultiImages imageList={[ require("../media/toaster_final_6.jpg"), 
                                       require("../media/toaster_final_7.jpg") ]}
                           size={8}
-                          caption='Before and after toasting is finished'
+                          caption='Before and after toasting is finished. Bread enters from top, pops out the side.'
                           altTextList={ ['', ''] }/>
 
             <Divider size={8}/>
 
             <TitledContent title='Process'
-                           body='hi'></TitledContent>
+                           body='I began the project by learning about the history of toasting
+                           and how modern toasters work. From there, I explored how a toaster could
+                           hold toast in different ways as well as different internal wiring structures
+                           that could complement or effect the form of the toaster. I decided
+                           a feature I wanted to include in my single slice toaster was to
+                           have the toast be "presented" to the user at the end. I also
+                           wanted to have the toaster to highlight the transformation that
+                           it was doing to the toast by having the bread enter and exit
+                           from different parts of the toaster.'></TitledContent>
 
             <MultiImages imageList={[ require("../media/toaster_process_1.jpg"), 
                                       require("../media/toaster_process_2.jpg") ]}
@@ -62,7 +70,14 @@ class SingleSliceToaster extends React.Component {
                           caption='Sketchbook pages'
                           altTextList={ ['', ''] }/>
             
-            <ContentBlock body='hello'/>
+            <ContentBlock body='From there, I began roughly sketching ortographic views. 
+                          When I was satisfied I would then project the design into a perspective drawing.
+                          I moved back and forth between orthographic and perspective sketching until
+                          I settled on a design. I would then model the design in SolidWorks
+                          to get a better sense of its volume. When my design concept was finalized, 
+                          I played around with
+                          the sizing and proportions of the toster so that a piece of bread and wiring
+                          could fit inside.'/>
 
             <ImageLibrary imageList={[ require("../media/toaster_process_3.jpg"),
                                        require("../media/toaster_process_4.jpg") ]}
@@ -70,23 +85,33 @@ class SingleSliceToaster extends React.Component {
                           captionList={[ 'Orthographic sketches', 'Proportions and sizing' ]}
                           altTextList={[ '', '' ]}/>
 
-            <ContentBlock body='hello'/>
+            <ContentBlock body='With the finalized concept, I continued moving between drawing
+                                and modeling in SolidWorks. Seeing the
+                                form in three dimensions (and not just perspective drawings) gave me 
+                                more insight on the form as it allowed me to rotate around the
+                                object freely and see it from all angles. I continued to make 
+                                tweaks to my design, relying more heavily on my model.'/>
 
             <ImageLibrary imageList={[ require("../media/toaster_process_5.jpg"),
-                                       require("../media/toaster_process_6.jpg"),
-                                       require("../media/toaster_process_7.jpg"),
+                                       require("../media/toaster_process_6.jpg") ]}
+                          size={6}
+                          captionList={[ 'Perspective sketches', 'Orthographic sketches' ]}
+                          altTextList={[ '', '' ]}/>
+
+            <ContentBlock body='Once I finished designing the form, I documented some of my decisions
+                              through sketching a wiring diagram and a storyboard about 
+                              the interactions a user will have with my single slice toaster.'/>
+
+            <ImageLibrary imageList={[ require("../media/toaster_process_7.jpg"),
                                        require("../media/toaster_process_8.jpg")  ]}
                           size={6}
-                          captionList={[ 'Perspective sketches', 'Orthographic sketches',
-                                         'Wiring and internal mechanisms',
+                          captionList={[ 'Wiring and internal mechanisms',
                                          'Storyboard' ]}
-                          altTextList={[ '', '', '', '' ]}/>
+                          altTextList={[ '', '' ]}/>
 
-            <ContentBlock body='hello'/>
-            
             <Image image={require("../media/toaster_process_9.jpg")}
                     size={6}
-                    caption={'Form model iterations'}
+                    caption={'All SolidWorks form model iterations'}
                     altText={'8 toaster forms from a back three quarter view'}/>
 
 

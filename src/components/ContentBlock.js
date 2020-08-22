@@ -347,6 +347,7 @@ class PDF extends React.Component {
           <Col md={margin}/>
           <Col md={this.props.size}>
             <embed class='pb-3' src= {this.props.file} width={w} height={h}></embed>
+            <p class='caption'>{this.props.caption}</p>
           </Col>
         </Row>
       </Container>

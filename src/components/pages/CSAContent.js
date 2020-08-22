@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages} from '../ContentBlock.js'
 
 import '../../App.css';
 
@@ -14,16 +14,25 @@ class CSAContent extends React.Component {
         <div class='pt-5'>
             <SectionTitle name='Computer Science Academy Content'></SectionTitle>
             <TitledContent title='Description'
-                           body= ''></TitledContent>
+                           body= 'CMU CS Academy is an interactive online high school 
+                           computer science curriculum. As a member of the content
+                           development team, I have made many exercises for different curriculums
+                           to teach students about programming, art, data visualization, and
+                           other computer science applications. This page has a selection
+                           of a few of my favorite.'></TitledContent>
 
             <TitledContent title='Tools + Skills'
-                           body='SolidWorks, KeyShot'></TitledContent>
+                           body='Python'></TitledContent>
 
             <TitledContent title='Duration'
-                           body='April 2020'></TitledContent>
+                           body='January 2020 - Present'></TitledContent>
             
-            <TitledContent title='Course'
-                           body='Product Design Studio II: Design for Interactions'></TitledContent>
+            <MultiImages imageList={[ require("../media/csa_gum.gif"), 
+                        require("../media/csa_sunset.gif"),
+                        require("../media/csa_urban.gif") ]}
+                        size={6}
+                        caption="Doctor's guide - information to reference during the card game"
+                        altTextList={ ['', '', ''] }/>
         </div>
     )
   }

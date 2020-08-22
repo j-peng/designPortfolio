@@ -20,7 +20,7 @@ class About extends React.Component {
             'My default answer for favorite ice cream flavor is Ben and Jerry’s red velvet although I’ve only had it once. I can’t find it in stores anymore.',
             'I went to University of Toronto School for high school. It is not a university (I get asked a lot).',
             'In high school I wanted to be a mechanical engineer. I then realized what I thought was a mechanical engineering was closer to industrial design.',
-            'I played chess completitivly. I got to represent Canada at the World Youth Under 16 Chess Olympiad. My USCF rating is 1859.',
+            'I played chess competitively. I got to represent Canada at the World Youth Under 16 Chess Olympiad. My USCF rating is 1859.',
             'I know how to glow string/ spin poi.',
             'Favorite design quote: "Always design a thing by considering it in its next larger context - a chair in a room, a room in a house, a house in an environment, an environment in a city plan" - Eero Saarinen'
  
