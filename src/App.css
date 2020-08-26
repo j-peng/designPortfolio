@@ -46,7 +46,6 @@
 h1 {
   color: #777873;
   font-size: 24px;
-  font-weight: bold;
 }
 
 h2 {
@@ -57,13 +56,13 @@ h2 {
 h3 {
   color: #302F2B;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .h3 {
   color: #302F2B;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 h4 {
@@ -74,7 +73,7 @@ h4 {
 h5 {
   color: #777873;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 h6 {
@@ -93,6 +92,15 @@ p {
   font-size: 14px;
 }
 
+.p-link {
+  color: #777873;
+  font-size: 14px;
+}
+
+.p-link:hover {
+  color: #94958F;
+}
+
 .btn-my-dark {
   background-color: #777873;
   color: #FFFFFF;
@@ -101,10 +109,35 @@ p {
 
 
 .tab-button {
-  color: #777873 !important;
+  color: #94958F !important;
   font-size: 14px;
   padding-right: 20px;
   cursor: pointer;
+}
+
+
+.dropdown {
+  background-color: #FFFFFF;
+  color: #777873 !important;
+  font-size: 14px;  
+  cursor: pointer;
+}
+
+.dropdown:active {
+  background-color: #FFFFFF;
+  color: #777873 !important;
+  font-size: 14px;  
+  cursor: pointer;
+}
+
+.dropdown-item {
+  background-color: #FFFFFF;
+  color: #302F2B;
+}
+
+.dropdown-item:active {
+  background-color: #E7E7DF;
+  color: #302F2B;
 }
 
 /* .tab-button:hover {
@@ -141,6 +174,30 @@ p {
   font-weight: normal;
 }
 
+.link-img {
+  color: #302F2B;
+  font-size: 14px; 
+}
+
+.link-img:hover {
+  color: #777873;
+  font-size: 14px; 
+}
+
+
+.aboveFoldLink {
+  color: #777873 !important;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.aboveFoldLink:hover{
+  color: #A8A9A4 !important;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+
 .caption {
   color: #777873;
   font-size: 12px;
@@ -172,6 +229,19 @@ p {
 
 .darknbold {
   color: #302F2B !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
+.light {
+  color: #D2D2CA;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.centered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

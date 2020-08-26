@@ -19,8 +19,8 @@ class DuckGame extends React.Component {
                              by House House. In Unfinished Duck Game, the player
                              plays as a duck trying to complete a set of tasks to
                              move on to the next area. Game includes procedurally
-                             generated backgrounds, player-object and player-npc 
-                             interactions,and npc behaviors such as chasing 
+                             generated backgrounds, player-object and player-npc
+                             interactions, and npc behaviors such as chasing 
                              the player and picking up items.'></TitledContent>
         <TitledContent title='Tools'
                        body='PyGame, Procreate'></TitledContent>

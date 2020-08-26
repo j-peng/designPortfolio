@@ -12,14 +12,14 @@ class CSAContent extends React.Component {
   render(){
     return (
         <div class='pt-5'>
-            <SectionTitle name='Computer Science Academy Content'></SectionTitle>
+            <SectionTitle name='CS Academy Content'></SectionTitle>
             <TitledContent title='Description'
                            body= 'CMU CS Academy is an interactive online high school 
                            computer science curriculum. As a member of the content
-                           development team, I have made many exercises for different curriculums
+                           development team, I have made many exercises for different curricula
                            to teach students about programming, art, data visualization, and
                            other computer science applications. This page has a selection
-                           of a few of my favorite.'></TitledContent>
+                           of a few of my favorite exercises.'></TitledContent>
 
             <TitledContent title='Tools + Skills'
                            body='Python'></TitledContent>

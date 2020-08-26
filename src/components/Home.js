@@ -3,8 +3,11 @@ import React from 'react';
 import AboveFold from './AboveFold.js'
 // import GalleryRow from './GalleryRow.js'
 import GalleryCard from './Card.js'
+import { ProductsGallery, UIUXGallery } from './Card.js'
 import SectionTitle from './SectionTitle.js'
-import TitledContent from './ContentBlock.js'
+import MyDropdown from './Dropdown.js'
+
+import { Spacer } from './ContentBlock.js'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
@@ -16,75 +19,52 @@ import '../App.css';
 class Home extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+      filter: 'All',
+      isAnimating: true,
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(newCategory){
+    this.setState({
+      filter: newCategory
+    })
+    this.setState({isAnimating: false})
   }
 
   render(){
+    let cards = [ <ProductsGallery/>, <UIUXGallery/> ]
+    if (this.state.filter === 'Product Design'){
+      cards = [ <ProductsGallery/> ]
+    } else if (this.state.filter === 'UI/UX Design'){
+      cards = [ <UIUXGallery/> ]
+    }
+
     return (
         <div>
-          <div class='pt-5'>
-            <AboveFold></AboveFold>
+            <AboveFold isAnimating={this.state.isAnimating}></AboveFold>
               
-              <SectionTitle name='Work'></SectionTitle>
-              
-              <div>
-                <Container name="top" fluid="md">
-                  <Row>
-                    <Col md={2}></Col>
-                    <Col md={5}>
-                      <GalleryCard title={'Flowform wood spatula'}
-                                  category={'Product Design'}
-                                  img={require("./media/cover_spatula.jpg")}
-                                  path={'/flowform'}>
-                      </GalleryCard>
-                    </Col>
-                    <Col md={5}>
-                      <GalleryCard title={'Book table'}
-                                category={'Product Design'}
-                                img={require("./media/cover_booktable.jpg")}
-                                path={'/booktable'}>
-                      </GalleryCard>
-                    </Col>
-                  </Row>
+            <div name='work' class='pb-5'/>
+            <Spacer size={2}/>
+            <Container>
+              <Row>
+                <Col md='2'/>
+                <Col>
+                  <h1>Work</h1>
+                </Col>
+                <Col>
+                  <MyDropdown currCategory={this.state.filter} 
+                                onClick={(i) => this.handleClick(i)}/>
+                </Col>
+              </Row>
+            </Container>
+            
+            <div>
+              <Container name="top" fluid="md">
+                {cards}
+              </Container>
 
-                  <Row>
-                    <Col md={2}></Col>
-                    <Col md={5}>
-                      <GalleryCard title={'Single slice toaster'}
-                                  category={'Product Design'}
-                                  img={require("./media/cover_toaster.jpg")}
-                                  path={'/toaster'}>
-                      </GalleryCard>
-                    </Col>
-                    <Col md={5}>
-                      <GalleryCard title={'Semantics of form exploration'}
-                                category={'Product Design'}
-                                img={require("./media/cover_semantics.jpg")}
-                                path={'/semantics'}>
-                      </GalleryCard>
-                    </Col>
-                  </Row>
-
-                  <Row>
-                    <Col md={2}></Col>
-                    <Col md={5}>
-                      <GalleryCard title={'CMU CS Academy'}
-                                  category={'UI/UX + Design Research'}
-                                  img={require("./media/cover_csa.jpg")}
-                                  path={'/csacademy'}>
-                      </GalleryCard>
-                    </Col>
-                    <Col>
-                      <GalleryCard title={'Nourishing our communities + Scheduling our Socials'}
-                                category={'Design Research'}
-                                img={require("./media/cover_nocsos.jpg")}
-                                path={'/NOC+SOS'}>
-                      </GalleryCard>
-                    </Col>
-                  </Row>
-
-                </Container>
-
-              </div>
             </div>
           </div>
     )

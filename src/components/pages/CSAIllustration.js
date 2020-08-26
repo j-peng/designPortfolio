@@ -12,15 +12,14 @@ class CSAIllustration extends React.Component {
   render(){
     return (
         <div class='pt-5'>
-            <SectionTitle name='Computer Science Academy Illustrations'></SectionTitle>
+            <SectionTitle name='CS Academy Illustrations'></SectionTitle>
             <TitledContent title='Description'
                            body= 'CMU CS Academy is an interactive online high school 
                            computer science curriculum. As a member of the UX Design team, 
                            I have made several illustrations for pages (mostly the splash page),
                            social media, and for company "swag".
                            This page has a selection of illustrations as well as
-                           some of the process in devloping the CS Academy illustration
-                           colors and style.'></TitledContent>
+                           some of the process behind devloping the style and colors.'></TitledContent>
 
             <TitledContent title='Tools + Skills'
                            body='Procreate'></TitledContent>
@@ -63,7 +62,7 @@ class CSAIllustration extends React.Component {
 
             <ContentBlock body='During the spring 2020 semester, 
                                 we decided to add illustations to our splash page
-                                design to add interest and excitement. We applied similar
+                                to add some excitement. We applied similar
                                 key words (playful, inclusive, engaging) to
                                 the illustrations which we had used to 
                                 inspire the splash page. Many of the initial drawings were
@@ -75,10 +74,9 @@ class CSAIllustration extends React.Component {
                           size={6}
                           caption='Initial sketches'
                           altTextList={ [ '', '', '' ] }/>
-              <ContentBlock body='I experimented a lot with style to get a better sense of
-                            what fit the company the best. The team decided on a more hand drawn
-                            feel rather than graphics done using the pen toll in Illustrator
-                            because it help more natural and "playful".'/>
+              <ContentBlock body='I experimented with style to get a better sense of
+                            what fit the company best. The team decided on hand drawn
+                            illustrations because they felt more natural and "playful".'/>
             <MultiImages imageList={[ require("../media/csaillustration_process_4.png"), 
                                       require("../media/csaillustration_process_5.png"),
                                       require("../media/csaillustration_process_6.png") ]}
@@ -87,14 +85,14 @@ class CSAIllustration extends React.Component {
                           altTextList={ [ '', '', '' ] }/>
               <ContentBlock body='From there, I began to experiement more with the composition
               of each illustration as well as the colors used. We had developed a
-              color system for the website by this point and we were working on a smaller,
+              color system for the website by this point and we were working on developing a smaller,
               more limited color scheme for the illustrations. Through many iterations, we settled on
               a certain style and color system for all illustrations.'/>
             <ImageLibrary imageList={[ require("../media/csaillustration_process_7.jpg"),
                                       require("../media/csaillustration_process_8.png"),
                                       require("../media/csaillustration_process_9.png") ]}
                           size={4}
-                          captionList={[ 'Splash page above the fold image first iterations',
+                          captionList={[ 'Splash page above the fold image first iteration',
                                          'Composition exploration',
                                          'Color exploration' ]}
                           altTextList={[ '', '', '' ]}/>

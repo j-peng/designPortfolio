@@ -11,7 +11,8 @@ class Footer extends React.Component {
       <div class='pt-5 align-center'>
         <hr class='soft-break'></hr>
         <SocialLinks></SocialLinks>
-        <p class='caption pt-3'>© 2020 Janet Peng. All Rights Reserved. Made with React-Boostrap.</p>
+        <p class='caption pt-3'>© 2020 Janet Peng. All Rights Reserved. Designed and coded 
+        myself with React.</p>
       </div>
     )
   }
