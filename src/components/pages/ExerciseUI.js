@@ -20,7 +20,7 @@ class ExerciseUI extends React.Component {
                            body='Ideate new exercise interactions and layout including
                            test cases and checklist, interview teachers for user testing, 
                            create surveys for teachers and students, user testing synthesis, 
-                           refine and clean up final design, deliver and explain to development team'></TitledContent>
+                           refine and clean up final design, deliver and explain to development team.'></TitledContent>
 
             <TitledContent title='Description'
                            body='A large part of the CS Academy curriculum revolves around
@@ -32,7 +32,7 @@ class ExerciseUI extends React.Component {
                            our test cases and the exercise checklist. We also saw the need to better
                            reference notes and course material through the exercise interface through 
                            observation from previous visits to high schools. Therefore, we set out to
-                           create interactions that better reflected the actions and use cases of the
+                           create interactions that better reflected the purpose of the
                            test cases.'></TitledContent>
             <ImageLibrary imageList={[ require("../media/exerciseUI_final_1.png"),
                                       require("../media/exerciseUI_final_2.png"),
@@ -41,18 +41,18 @@ class ExerciseUI extends React.Component {
                                       size={6}
                                       captionList={[ 'Before coding',
                                                      'Initially no test cases selected',
-                                                     'Hovering on a test case, showing shortcuts',
-                                                     'Test case added to code, showing shortcuts' ]}
+                                                     'Hovering on a test case, showing editor shortcuts',
+                                                     'Test case added to code, showing editor shortcuts' ]}
                                       altTextList={[ '', '', '' ]}/>
 
             <Divider size={6}/>
             <TitledContent title='Process'
-                           body= 'The begining of our design process was inspired by
+                           body= 'The beginning of our design process was inspired by
                            teacher comments we recieved during teacher training
-                           and support tickets we recieved. It was apparent through 
+                           and support tickets. It was apparent through 
                            these conversations with our users that the current interface
                            had a few problems: students were not reading the checklist
-                           to get hints and understand the coding problems,
+                           to get hints to understand the problem,
                            and both students and teachers struggled to understand
                            the use of our test cases on a deeper level.'></TitledContent>
 
@@ -63,9 +63,10 @@ class ExerciseUI extends React.Component {
                           caption='Initial iterations'
                           altTextList={ ['', '', ''] }/>
 
-            <ContentBlock body='Our initial iterations focused on ways we could highlight the checklist
-            more so that students would want to engage with it more meaningfully.
-            we experimented with ideas such as having it as a draggable modal, seperating our
+            <ContentBlock body='Our initial iterations focused on ways we 
+            could highlight the checklist
+            further so that students would want to engage with it more meaningfully.
+            We experimented with ideas such as having it as a draggable modal, seperating our
             checklist items (introduction and instructions) and test cases (to run to test
             the code) and making other helpful pages more accessible from the coding
             editor screen.'/>
@@ -81,17 +82,17 @@ class ExerciseUI extends React.Component {
             <MultiImages imageList={[ require("../media/exerciseUI_process_4.png"), 
                                       require("../media/exerciseUI_process_5.png") ]}
                           size={6}
-                          caption='Design for user testing 1'
+                          caption='First design for user testing'
                           altTextList={ ['', ''] }/>
             <MultiImages imageList={[ require("../media/exerciseUI_process_6.png"), 
                                       require("../media/exerciseUI_process_7.png") ]}
                           size={6}
-                          caption='Design for user testing 2'
+                          caption='Second design for user testing'
                           altTextList={ ['', ''] }/>
 
             <ContentBlock body='After user testing and collecting data from our survey, 
             we took our findings and made an affinity map to help synthesize the information.
-            Some of our key take aways were that teachers strongly prefered simplicity
+            Some of our key take aways were that teachers strongly preferred simplicity
             and familiarity with interfaces. Students on the other hand enjoyed many new
             features if they allowed them to work faster or reference key information
             more quickly.'/>
@@ -101,7 +102,7 @@ class ExerciseUI extends React.Component {
                    caption='Affinity mapping after user testing with teachers and students'
                    altText={''}/>
 
-            <ContentBlock body='With more insight on our designs from our user testing,
+            <ContentBlock body='With more insight on our designs from our users,
             we made some more iterations on our design. From there, we showed it to the
             software development team to get their input on implementation. With their
             feedback and help in developing an intial draft of the design, we were able

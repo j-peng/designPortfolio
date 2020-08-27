@@ -48,14 +48,15 @@ class CSAcademy extends React.Component {
         <div class='pt-5'>
             <SectionTitle name='CMU CS Academy'></SectionTitle>
             <TitledContent title='Description'
-                           body= 'CMU CS Academy is an interactive online high 
+                           body= "CMU CS Academy is an interactive online high 
                                  school computer science curriculum. As a member 
                                  of the UX Design team and as the current team lead, 
-                                 we have worked many areas of the interface ranging 
+                                 we have worked on many areas of the interface ranging 
                                  from new accessibility features to new colors and 
-                                 visual style. On this page you can find our work 
-                                 on the splash page, coding library documentation, 
-                                 and our user’s programming exercise interface.'></TitledContent>
+                                 visual style. On this page you can find a selection of
+                                 the work I've done on the project including the
+                                 exercise programming interface, splash page, 
+                                 and coding graphics library documentation."/>
 
             <TitledContent title='Tools + Skills'
                            body='Figma, Procreate, User Testing'></TitledContent>

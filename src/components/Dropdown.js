@@ -13,15 +13,15 @@ class MyDropdown extends React.Component {
 
     render(){
       return (
-          <Dropdown style={{display: 'flex', justifyContent: 'flex-end'}}>
+          <Dropdown style={{display: 'flex', justifyContent: 'flex-end'}} className='my-dropdown'>
             <Dropdown.Toggle variant='light'>
                 {'Showing: ' + this.props.currCategory}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
                 <Dropdown.Item onClick = {() => this.props.onClick('All')}>All</Dropdown.Item>
-                <Dropdown.Item onClick = {() => this.props.onClick('Product Design')}>Product Design</Dropdown.Item>
-                <Dropdown.Item onClick = {() => this.props.onClick('UI/UX Design')}>UI/UX</Dropdown.Item>
+                <Dropdown.Item onClick = {() => this.props.onClick('Products')}>Products</Dropdown.Item>
+                <Dropdown.Item onClick = {() => this.props.onClick('UI/UX')}>UI/UX</Dropdown.Item>
             </Dropdown.Menu>
            </Dropdown>
       )

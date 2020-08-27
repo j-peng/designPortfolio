@@ -17,11 +17,12 @@ class BookTable extends React.Component {
                            body= 'Design a book table made from one 11" x 60 " x 1" 
                                   board of poplar wood. Join four perpendicular planes 
                                   together in order to celebrate, present, or display a 
-                                  book. This book table is designed for A4 sized sketchbooks. 
-                                  It can hold multiple sketchbooks in three different positions. 
-                                  The book table highlights the book at the front, designed to 
-                                  bring attention and interaction to one sketchbook while storing 
-                                  others away.'></TitledContent>
+                                  book.'></TitledContent>
+            <ContentBlock body='This book table is designed for A4 sized sketchbooks. 
+                          It can hold multiple sketchbooks in three different positions. 
+                          The book table highlights the book at the front, designed to 
+                          bring attention and interaction to that one sketchbook while storing 
+                          others away.'/>
 
             <TitledContent title='Tools + Skills'
                            body='SolidWorks, KeyShot'></TitledContent>
@@ -38,11 +39,11 @@ class BookTable extends React.Component {
                                        require("../media/booktable_final_2.jpg") ]}
                           size={6}
                           captionList={[ 'Book table holding one sketchbook', 
-                                         'Book table with a sketchbook in the three possible positions' ]}
+                                         'Book table with a sketchbook in each of the three possible positions' ]}
                           altTextList={[ 'Wooden book table holding a sketchbook out in the front', 
                                          'Wooden book table with three black sketchbooks positioned inside, on top, and infront of the book table.' ]}/>
 
-            <YTVid ytid='ISCL-W4kmII' size={6}/>
+            <YTVid ytid='ISCL-W4kmII' size={6} caption='Animation depicting assembly process'/>
 
             </div>
 
@@ -50,12 +51,11 @@ class BookTable extends React.Component {
             <TitledContent title='Process'
                            body='I started by sketching flat boards and compositions
                            as well as quickly mocking up designs using quarter scale
-                           modes constructed out of pins and foam core. This helped me experiment
+                           models constructed out of pins and foam core. This helped me experiment
                            with many different designs at the beginning of the project
-                           to give me a better sense of the direction I wanted to go. Making models
+                           to give me a better sense of the direction I wanted to go in. Making models
                            also helped me visualize how I would cut each board out of
-                           the wooden plank we were given.
-                           '/>
+                           the single wooden plank we were given.'/>
 
             <MultiImages imageList={[ require("../media/booktable_process_1.jpg"), 
                                       require("../media/booktable_process_2.jpg"), 
@@ -83,13 +83,14 @@ class BookTable extends React.Component {
             <ContentBlock body='Once I was settled on a design with my quarter scale model, 
                                 I made a full scale cardboard model. To aid in the construction
                                 of the full scale version, I constructued the model in 
-                                SolidWorks and made a few technical drawings. This helped me realize
+                                SolidWorks and made a few technical drawings. A full scale
+                                mode helped me realize
                                 the structural vulnerability of the design and how it could tip
                                 or be unstable. It also helped me visualize more clearly
                                 where my joinery would go and how secure it would be.'/>
 
             <PDF file={require("../media/booktable_process_pdf.pdf")}
-                 size={6} ratio={8.5/11}/>
+                 size={6} ratio={8.5/11} caption='Technical drawings from SoidWorks'/>
             <Spacer size={2}/>
             <MultiImages imageList={[ require("../media/booktable_process_7.jpg"), 
                                       require("../media/booktable_process_8.jpg"),

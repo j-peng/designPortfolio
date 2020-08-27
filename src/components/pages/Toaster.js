@@ -18,13 +18,13 @@ class SingleSliceToaster extends React.Component {
                                   the interactions, mechanisms, and internal wiring
                                   that creates the action of toasting. Use renderings
                                   to communicate the design and interaction. Do not
-                                  use any materials to represent the object. This 
-                                  single slice toaster causes the bread to move 
-                                  with the user's actions through the knob. 
-                                  The bread goes on a journey through the toaster,
-                                  entering as bread and emerging as toast.
-                                  The user is responisble to driving this evolution from
-                                  bread into toast."></TitledContent>
+                                  use any materials to represent the object."></TitledContent>
+            <ContentBlock body="This single slice toaster causes the bread to move 
+                                with the user's actions with the knob. 
+                                The bread goes on a journey through the toaster,
+                                entering the top as bread and emerging from the side as toast.
+                                The user is responisble to driving this evolution from
+                                bread into toast."/>
 
             <TitledContent title='Tools + Skills'
                            body='SolidWorks, KeyShot'></TitledContent>
@@ -48,7 +48,7 @@ class SingleSliceToaster extends React.Component {
               <MultiImages imageList={[ require("../media/toaster_final_6.jpg"), 
                                       require("../media/toaster_final_7.jpg") ]}
                           size={8}
-                          caption='Before and after toasting is finished. Bread enters from top, pops out the side.'
+                          caption='Before and after toasting is finished. Bread enters from top, pops out the side. Knob must be twisted to release the bread.'
                           altTextList={ ['', ''] }/>
 
             <Divider size={8}/>
@@ -60,9 +60,9 @@ class SingleSliceToaster extends React.Component {
                            that could complement or effect the form of the toaster. I decided
                            a feature I wanted to include in my single slice toaster was to
                            have the toast be "presented" to the user at the end. I also
-                           wanted to have the toaster to highlight the transformation that
+                           wanted the toaster to highlight the transformation that
                            it was doing to the toast by having the bread enter and exit
-                           from different parts of the toaster.'></TitledContent>
+                           from different parts.'></TitledContent>
 
             <MultiImages imageList={[ require("../media/toaster_process_1.jpg"), 
                                       require("../media/toaster_process_2.jpg") ]}
@@ -70,13 +70,13 @@ class SingleSliceToaster extends React.Component {
                           caption='Sketchbook pages'
                           altTextList={ ['', ''] }/>
             
-            <ContentBlock body='From there, I began roughly sketching ortographic views. 
-                          When I was satisfied I would then project the design into a perspective drawing.
+            <ContentBlock body='From there, I began roughly sketching ortographic views and
+                          projecting the designs into a perspective drawing.
                           I moved back and forth between orthographic and perspective sketching until
-                          I settled on a design. I would then model the design in SolidWorks
+                          I settled on a design. I then modeled the design in SolidWorks
                           to get a better sense of its volume. When my design concept was finalized, 
-                          I played around with
-                          the sizing and proportions of the toster so that a piece of bread and wiring
+                          I played around with the sizing and proportions of the toster 
+                          so that a piece of bread and wiring
                           could fit inside.'/>
 
             <ImageLibrary imageList={[ require("../media/toaster_process_3.jpg"),
@@ -88,7 +88,7 @@ class SingleSliceToaster extends React.Component {
             <ContentBlock body='With the finalized concept, I continued moving between drawing
                                 and modeling in SolidWorks. Seeing the
                                 form in three dimensions (and not just perspective drawings) gave me 
-                                more insight on the form as it allowed me to rotate around the
+                                more insight on the form as it allowed me to rotate the
                                 object freely and see it from all angles. I continued to make 
                                 tweaks to my design, relying more heavily on my model.'/>
 
@@ -100,7 +100,7 @@ class SingleSliceToaster extends React.Component {
 
             <ContentBlock body='Once I finished designing the form, I documented some of my decisions
                               through sketching a wiring diagram and a storyboard about 
-                              the interactions a user will have with my single slice toaster.'/>
+                              the interactions a user would have with my toaster.'/>
 
             <ImageLibrary imageList={[ require("../media/toaster_process_7.jpg"),
                                        require("../media/toaster_process_8.jpg")  ]}

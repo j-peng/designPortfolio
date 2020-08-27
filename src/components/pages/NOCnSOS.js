@@ -22,8 +22,8 @@ class NOC extends React.Component {
                         for posters, helped plan and organize research, participated in group
                         brainstorming sessions'/>
         <TitledContent title='Description'
-                        body='HomeCooked is a system (with a digital mobile app component and 
-                        physical meet up component) inspired by our research that helps 
+                        body='HomeCooked is a system (with a mobile app and 
+                        physical meet up components) inspired by our research that helps 
                         build community through cooking and sharing home cooked meals, 
                         traditions, and cultural foods.'/>
 
@@ -67,7 +67,7 @@ class SOS extends React.Component {
                         to uncover how HomeCooked could facilitate the process of hanging out.
                         Through research we uncovered information about user behavior, pain points,
                         and what features we could add to the HomeCooked system to make it a
-                        better experience.'/>
+                        better experience for students.'/>
         <PDF file={require("../media/SOS_final_pdf.pdf")}
             size={6} ratio={8.5/11} caption={'Final research report and summary'}/>
 
@@ -112,8 +112,8 @@ class NOCnSOS extends React.Component {
             <TitledContent title='Description'
                            body= 'Find a problem area on campus. Research 
                                   the problem and propose a design intervention.
-                                  Nourishing our communities (NOC) and Scheduling
-                                  our socials (SOS) tackle the lack of community and lonliness
+                                  Nourishing Our Communities (NOC) and Scheduling
+                                  Our Socials (SOS) tackle the lack of community at CMU and lonliness
                                   felt by students on campus. The project focused on how undergraduate 
                                   students at CMU schedule for food-related social events and the 
                                   planning process that goes into it. We posed the question:

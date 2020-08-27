@@ -35,9 +35,9 @@ class Home extends React.Component {
 
   render(){
     let cards = [ <ProductsGallery/>, <UIUXGallery/> ]
-    if (this.state.filter === 'Product Design'){
+    if (this.state.filter === 'Products'){
       cards = [ <ProductsGallery/> ]
-    } else if (this.state.filter === 'UI/UX Design'){
+    } else if (this.state.filter === 'UI/UX'){
       cards = [ <UIUXGallery/> ]
     }
 

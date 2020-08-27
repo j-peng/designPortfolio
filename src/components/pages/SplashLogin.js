@@ -28,11 +28,11 @@ class CSASplashLogin extends React.Component {
                                  needed a new set of colors with high contrast and distinct 
                                  hues to assist students and teachers with visual impairments. 
                                  Further, the interface did not have a cohesive voice or style. 
-                                 We set out to better unify the website’s experience and 
+                                 We set out to better unify the website’s experience and design
                                  how we would expose new users to our company’s unique personality.'/>
             <ContentBlock body='The first interface we began designing to reinvent the color system 
                                 and the style was the splash page and other related sign up/login interfaces. 
-                                To see the live site visit:'/>
+                                To see the live website and design visit:'/>
             <ContentBlock body=<a class='link' target='_blank'
                                   href='https://academy.cs.cmu.edu/splash'>https://academy.cs.cmu.edu/splash</a>/>
 
@@ -56,22 +56,22 @@ class CSASplashLogin extends React.Component {
                                  on the splash page. We considered what kinds of information 
                                  our users, specifically teachers, school administrators, 
                                  and students, wanted to see and know once they visited the 
-                                 site. We also reviewed the old site splash page to better 
-                                 understand what infomration we were currently offering and 
-                                 the gaps in the infomration. After talking to the project 
+                                 site. We also reviewed the old splash page to better 
+                                 understand what information we were currently offering and 
+                                 the gaps in that infomration. After talking to the project 
                                  manager to get her input and vision of the splash page content, 
                                  we narrowed it down to six broad content categories: 
                                  basic information,  hooks that “make a statement”, 
                                  humanizing CS Academy, showing credibility, explaining the 
-                                 logisitcs of using our product, and how we are engaging 
+                                 logisitcs of using our product, and how our platform is engaging 
                                  and creative. We decided that some of these content cateogries 
-                                 needed more space on the splash than others since 
-                                 “showing credibility” came a lot through being 
-                                 Carnegie Mellon University Computer Science Academy.'/>
+                                 needed more space on the splash than others. For example, 
+                                 “showing credibility” came a lot through being affiliated with
+                                 Carnegie Mellon University, so we did not
+                                 need to focus on it as much.'/>
 
-            <ContentBlock body='With general content brainstormed, we worked on possible 
-                                flows to help organize the content we wanted to 
-                                include that would cover all our content categories.'/>
+            <ContentBlock body='With general content cateogires brainstormed, we worked on possible 
+                                flows to help organize the content.'/>
             <Image image={require("../media/splash_4.png")}
                    size={8}
                    caption={'Splash page content and content flows ideation'}
@@ -80,8 +80,8 @@ class CSASplashLogin extends React.Component {
             <ContentBlock body='After settling on a content stucture, we began to visualize 
                                 what individual pieces of the page would look like. We paid 
                                 close attention to content and wording during these iterations. 
-                                Next, we roughly assembled these individual pieces into our 
-                                splash page flow plan. From there, we were prepared to begin to 
+                                Next, we roughly assembled these individual pieces into the order of our 
+                                flow plan. From there, we were prepared to begin to 
                                 add color and more deliberate styling to the page to better 
                                 reflect the CMU CS Academy voice.'/>
             <ContentBlock body='Before stylizing, we put together a list of words that helped us 
@@ -92,28 +92,30 @@ class CSASplashLogin extends React.Component {
                    caption={'Style iterations for the splash page'}
                    altText={'Six frames showing a variety of styling choices applied to the same page content'}/>
             
-            <ContentBlock body='After style, we worked on fializing colors. We had tried a 
-                                lot of color palettes before formally working on the splash 
+            <ContentBlock body='After style, we worked on fializing colors. We had experiemented with
+                                color before formally working on the splash 
                                 page so we had some sort of direction to go in. We were also 
-                                drawn towards purple/blue as a main color since they had 
+                                drawn towards purple or blue as a main color since they had 
                                 been the main colors used on the site in the past. To compare 
                                 colors, we added them to the styalized splash page layouts. 
-                                We intentionally chose to pick colors last so we could compare 
+                                We intentionally decided to work on colors last so we could compare 
                                 them in the context of the page’s content.'/>
+
             <Image image={require("../media/splash_6.png")}
                    size={6}
                    caption={'Selection or color palette exploration'}
                    altText={'15 color palette variations many consisting of the color purple'}/>
+
             <ContentBlock body='To finish up the splash page we made various icons and illustrations
-                                to match our new colors and syle. These gave the page a friendlier feel
+                                to match our new colors and style. These gave the page a friendlier feel
                                 which we thought fit well with the playfulness of CS Academy. See more
                                 about the process behind the illustrations:'/>
             <ContentBlock body=<Link class='link' target='_blank'
                                   to='/CSAillustration'>CS Academy Illustrations</Link>/>
-            <ContentBlock body='After Finishing up the splash page, we began to build out 
+            <ContentBlock body='After finishing up the splash page, we began to build out 
                                 styled components for other related pages, such as the login 
                                 and sign up pages. To make the login and sign up experience 
-                                more integrated with the newly stalized and colored splash page, 
+                                more integrated with the newly styalized and colored splash page, 
                                 we decided to make them modals. We also applied our new color 
                                 scheme to the various buttons and input boxes. Finally, 
                                 we updated the tabbing strucutre for the different account 

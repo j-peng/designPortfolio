@@ -99,6 +99,7 @@ p {
 
 .p-link:hover {
   color: #94958F;
+  text-decoration: none;
 }
 
 .btn-my-dark {
@@ -109,23 +110,26 @@ p {
 
 
 .tab-button {
-  color: #94958F !important;
+  color: #BCBDB7 !important;
   font-size: 14px;
   padding-right: 20px;
   cursor: pointer;
 }
 
+.tab-button:hover {
+  color: #94958F !important;
+}
 
-.dropdown {
+.my-dropdown {
   background-color: #FFFFFF;
   color: #777873 !important;
   font-size: 14px;  
   cursor: pointer;
 }
 
-.dropdown:active {
+.my-dropdown:active:hover {
   background-color: #FFFFFF;
-  color: #777873 !important;
+  color: #BCBDB7 !important;
   font-size: 14px;  
   cursor: pointer;
 }
@@ -172,6 +176,7 @@ p {
   display: inline-block;
   line-height: 0.8;
   font-weight: normal;
+  text-decoration: none;
 }
 
 .link-img {

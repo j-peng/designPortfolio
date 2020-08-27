@@ -24,13 +24,13 @@ class DocsColors extends React.Component {
                            body='After working on the splash page, we worked on updating
                            the designs of pages linked to the splash page. This included
                            our about page, FAQ page, and our framework documentation
-                           page. The new Docs + Colors page replaced the Docs page and the
+                           page. The new Docs + Colors page replaced the previous Docs page and the
                            Colors page, both used to document pieces of the CMU
                            CS Academy graphics framework. Our main goals for this update
                            were to: make the page fit our new style, clear up the formatting
                            so that the page could be skimmed more easily, and provide
                            more diagram or image based documentation for visual learners.
-                           To see the live site visit:'></TitledContent>
+                           To see the live website and design visit:'></TitledContent>
             <ContentBlock body=<a href='https://academy.cs.cmu.edu/docs'
             class='link' target='_blank'>https://academy.cs.cmu.edu/docs</a>/>
 
