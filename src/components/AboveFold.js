@@ -51,18 +51,6 @@ class AboveFold extends React.Component {
   render() {
     const width = this.state.width
     const isMobile = width <= 700
-    let tagLine = <TypingIntros phrase={this.state.introductions[this.state.introIndex]}
-                                changeIntro = {() => this.changeIntro()}/>
-
-    if (this.props.isAnimating === false) {
-      tagLine = <h2>Janet Peng</h2>
-    } else if (this.state.isAnimating === false) {
-      if (this.state.imageStyle === true) {
-        tagLine = <h2>Janet - a Product Designer</h2>
-      } else {
-        tagLine = <h2>Janet - a UX Designer</h2>
-      }
-    }
 
     let splashImg = require("./media/splash_products.png")
     if (this.state.imageStyle === false){
@@ -73,7 +61,7 @@ class AboveFold extends React.Component {
       return(
         <div>
           <Container name="top" fluid="md">
-            <Spacer size={3}/>
+            <Spacer size={4}/>
             <a onClick={() => this.handleImageClick()}>
                     <img src={splashImg} 
                         alt="Stickers of different design projects"
@@ -81,10 +69,9 @@ class AboveFold extends React.Component {
                         class='centered-img'/>
             </a>
             <div class='pl-5'>
-              <h2 class='pt-5'>Hey there, I'm</h2>
-              {tagLine}
+              <h2 class='pt-5'>Hey there, I'm Janet</h2>
             
-            <div class='pt-5'>
+            <div class='pt-4'>
             <Link activeClass="active" to="work" spy={true} smooth={true} duration={800}> 
               <a class='aboveFoldLink'>See my work <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -105,6 +92,18 @@ class AboveFold extends React.Component {
         </div>
       )
     } else {
+      let tagLine = <TypingIntros phrase={this.state.introductions[this.state.introIndex]}
+      changeIntro = {() => this.changeIntro()}/>
+
+      if (this.props.isAnimating === false) {
+        tagLine = <h2>Janet Peng</h2>
+      } else if (this.state.isAnimating === false) {
+        if (this.state.imageStyle === true) {
+          tagLine = <h2>Janet - a Product Designer</h2>
+      } else {
+        tagLine = <h2>Janet - a UX Designer</h2>
+        }
+      }
       return (
         <div class='py-3'>
         <Spacer size={2}/>
