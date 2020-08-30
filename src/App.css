@@ -200,6 +200,15 @@ p {
   text-decoration: none;
 }
 
+.back-link {
+  color: #777873 !important;
+  font-size: 14px !important;
+}
+
+.back-link:hover {
+  color: #94958F !important;
+  text-decoration: none !important;
+}
 
 .caption {
   color: #777873;

@@ -42,7 +42,8 @@ class GraphicDesign extends React.Component {
                                        require("../media/incite_3.jpg"),
                                        require("../media/incite_4.jpg") ]}
                           size={6}
-                          captionList={[ 'Table of contents', 'Cover', 'Editorial', 'Piece from in:cite volume 3' ]}
+                          captionList={[ 'Table of contents (volume 3)', 'Cover (volume 3)', 
+                                         'Editorial (volume 3)', 'Piece from in:cite volume 3' ]}
                           altTextList={[ '', '', '', '' ]}/>
 
             <Divider size={8}/>
@@ -50,8 +51,8 @@ class GraphicDesign extends React.Component {
             <SectionTitle name='Hand Mixer Book'/>
             <TitledContent title='Description'
                            body= "Book explaining and illustrating how a Hamilton Beach Hand
-                           Mixer works. Sources for research for book content include
-                           online readings and website, dismantling a hand mixer to 
+                           Mixer works. Research sources for book content include
+                           online readings and websites, dismantling the hand mixer to 
                            study the wiring, and analyzing the sound and speeds of the hand mixer
                            through video and audio recordings. "/>
             <TitledContent title='Team'
@@ -60,7 +61,7 @@ class GraphicDesign extends React.Component {
                            body= "Layout (pages 1, 4, 8, 12), illustrations (pages 1, 2, 4, 8, 12, 14), compiling book, proof reading,
                                   participated in research, page and content ordering."></TitledContent>
             <TitledContent title='Tools + Skills'
-                           body= "InDesign, Illustrator"></TitledContent>
+                           body= "Research, InDesign, Illustrator"></TitledContent>
             <TitledContent title='Course'
                            body= "How Things Work"></TitledContent>
             <PDF file={require("../media/HandMixerBook.pdf")}

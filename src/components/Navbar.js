@@ -18,8 +18,8 @@ class MyNav extends React.Component {
 
             </Navbar.Brand>
             <Nav className="pt-2">
-            <Nav.Link href='/'>
-                <h6 class={(this.props.currpath === '/') ? 'darknbold' : 'light'}>Home</h6></Nav.Link>
+            <Nav.Link href='/#work'>
+                <h6 class={(this.props.currpath === '/') ? 'darknbold' : 'light'}>Work</h6></Nav.Link>
             <Nav.Link href='/play'>
                 <h6 class={(this.props.currpath === '/play') ? 'darknbold' : 'light'}>Play</h6></Nav.Link>
             <Nav.Link href='/about'>

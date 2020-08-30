@@ -47,7 +47,7 @@ class CSAcademy extends React.Component {
     return (
         <div class='pt-4'>
             <SectionTitleWithBack name='CMU CS Academy'
-                                  page='/'/>
+                                  href='/#work'/>
             <TitledContent title='Description'
                            body= "CMU CS Academy is an interactive online high 
                                  school computer science curriculum. As a member 

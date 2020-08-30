@@ -4,7 +4,6 @@ import AboveFold from './AboveFold.js'
 // import GalleryRow from './GalleryRow.js'
 import GalleryCard from './Card.js'
 // import { ProductsGallery, UIUXGallery } from './Card.js'
-import SectionTitle from './SectionTitle.js'
 import MyDropdown from './Dropdown.js'
 
 import { Spacer } from './ContentBlock.js'
@@ -110,7 +109,7 @@ class Home extends React.Component {
     return (
         <div>
             <AboveFold isAnimating={this.state.isAnimating}></AboveFold>
-            <div name='work' class='pb-5'/>
+            <div name='work' class='pb-5' id='work'/>
             <Spacer size={2}/>
             <Container>
               <Row>

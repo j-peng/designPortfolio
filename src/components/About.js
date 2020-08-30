@@ -272,10 +272,13 @@ class About extends React.Component {
                     <Col md={1}></Col>
 
                     <Col md={5}>
-                        <h4 class='pb-2'>Hello! <span class='px-1'/><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-egg-fried" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M13.665 6.113a1 1 0 0 1-.667-.977L13 5a4 4 0 0 0-6.483-3.136 1 1 0 0 1-.8.2 4 4 0 0 0-3.693 6.61 1 1 0 0 1 .2 1 4 4 0 0 0 6.67 4.087 1 1 0 0 1 1.262-.152 2.5 2.5 0 0 0 3.715-2.905 1 1 0 0 1 .341-1.113 2.001 2.001 0 0 0-.547-3.478zM14 5c0 .057 0 .113-.003.17a3.001 3.001 0 0 1 .822 5.216 3.5 3.5 0 0 1-5.201 4.065 5 5 0 0 1-8.336-5.109A5 5 0 0 1 5.896 1.08 5 5 0 0 1 14 5z"/>
-  <circle cx="8" cy="8" r="3"/>
-</svg></h4>
+                        <h4 class='pb-2'>Hello! <span class='px-1'/>
+                            <ImgWithDesc placement='top'
+                                    text="egg!"
+                                    image={<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-egg-fried" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.665 6.113a1 1 0 0 1-.667-.977L13 5a4 4 0 0 0-6.483-3.136 1 1 0 0 1-.8.2 4 4 0 0 0-3.693 6.61 1 1 0 0 1 .2 1 4 4 0 0 0 6.67 4.087 1 1 0 0 1 1.262-.152 2.5 2.5 0 0 0 3.715-2.905 1 1 0 0 1 .341-1.113 2.001 2.001 0 0 0-.547-3.478zM14 5c0 .057 0 .113-.003.17a3.001 3.001 0 0 1 .822 5.216 3.5 3.5 0 0 1-5.201 4.065 5 5 0 0 1-8.336-5.109A5 5 0 0 1 5.896 1.08 5 5 0 0 1 14 5z"/>
+                                    <circle cx="8" cy="8" r="3"/>
+                                    </svg>}/></h4>
                         <p>
                         My name is Janet and I’m a junior studying design at CMU.
                         I design exeriences. Whether that be with physical products 
@@ -303,28 +306,28 @@ class About extends React.Component {
                         </p>
 
                         <div class='pt-3'>
-                        <Row>
-                            <Col md={9}><h6 class='pt-2'>Fun Fact!</h6></Col>
-                            <Col md={3}>
-                                <OverlayTrigger
-                                    placement='top'
-                                    overlay={<Tooltip>reroll</Tooltip>}>
-                                    <Button onClick={() => this.handleClick()} 
-                                         size='sm' 
-                                         block='false' 
-                                         variant='light'><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dice-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                         <path fill-rule="evenodd" d="M13 1H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
-                                         <circle cx="4" cy="4" r="1.5"/>
-                                         <circle cx="12" cy="4" r="1.5"/>
-                                         <circle cx="12" cy="12" r="1.5"/>
-                                         <circle cx="4" cy="12" r="1.5"/>
-                                         <circle cx="8" cy="8" r="1.5"/></svg>
-                                    </Button>
-                                </OverlayTrigger>
-                            </Col>
-                        </Row> 
-                        
-                        <p class='pt-1'>{this.state.currFact}</p>
+                            <Row>
+                                <Col md={9}><h6 class='pt-2'>Fun Fact!</h6></Col>
+                                <Col md={3}>
+                                    <OverlayTrigger
+                                        placement='top'
+                                        overlay={<Tooltip>reroll</Tooltip>}>
+                                        <Button onClick={() => this.handleClick()} 
+                                            size='sm' 
+                                            block='false' 
+                                            variant='light'><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dice-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M13 1H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"/>
+                                            <circle cx="4" cy="4" r="1.5"/>
+                                            <circle cx="12" cy="4" r="1.5"/>
+                                            <circle cx="12" cy="12" r="1.5"/>
+                                            <circle cx="4" cy="12" r="1.5"/>
+                                            <circle cx="8" cy="8" r="1.5"/></svg>
+                                        </Button>
+                                    </OverlayTrigger>
+                                </Col>
+                            </Row> 
+                            
+                            <p class='pt-1'>{this.state.currFact}</p>
                         </div>
 
                     </Col>

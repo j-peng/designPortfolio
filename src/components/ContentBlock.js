@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
+import Nav from 'react-bootstrap/Nav'
 
 import { RViewer, RViewerTrigger } from 'react-viewerjs'
 
@@ -492,16 +493,20 @@ class SectionTitle extends React.Component {
 
 class SectionTitleWithBack extends React.Component {
   render(){
+    let backLink = <Nav.Link href={this.props.href}><a class='back-link'>back</a></Nav.Link>
+    if (this.props.page != null){
+      backLink = <Link to={this.props.page} 
+                       class='p-link'>
+                      <a>back</a>
+                 </Link>
+    }
     return (
       <div class='py-2'>
         <Container name="top" fluid="md">
             <Row>
               <Col md = {1}/>
               <Col md = {1}>
-                <Link to={this.props.page} 
-                      class='p-link'>
-                  <a>back</a>
-                </Link>
+                {backLink}
               </Col>
               <Col md = {4}>
                 <h1>{this.props.name}</h1>

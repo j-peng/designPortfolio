@@ -12,7 +12,7 @@ class SingleSliceToaster extends React.Component {
     return (
         <div class='pt-5'>
             <SectionTitleWithBack name='Single Slice Toaster'
-                                  page='/'/>
+                                  href='/#work'/>
             <TitledContent title='Description'
                            body= "Design a single slice toaster inside out. Consider
                                   the experience, interactions, mechanisms, and internal wiring

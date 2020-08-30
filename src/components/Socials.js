@@ -8,35 +8,40 @@ class SocialLinks extends React.Component {
             <span class='px-2'>
                 <SocialIcon url='https://www.linkedin.com/in/janet-peng-348198133/'
                             style={{ height: 30, width: 30 }} 
-                            bgColor="#777873"
+                            bgColor="#ffffff"
+                            fgColor="#777873"
                             target="_blank"/>
             </span>
 
             <span class='px-2'>
                 <SocialIcon url="https://medium.com/@jjpeng" 
-                            style={{ height: 30, width: 30 }} 
-                            bgColor="#777873"
+                            style={{ height: 29, width: 29 }} 
+                            bgColor="#ffffff"
+                            fgColor="#777873"
                             target="_blank"/>
             </span>
 
             <span class='px-2'>
                 <SocialIcon url='https://www.behance.net/jjpeng'
-                            style={{ height: 30, width: 30 }} 
-                            bgColor="#777873"
+                            style={{ height: 34, width: 34 }} 
+                            bgColor="#ffffff"
+                            fgColor="#777873"
                             target="_blank"/>
             </span>
 
             <span class='px-2'>
                 <SocialIcon url='https://github.com/j-peng'
                             style={{ height: 30, width: 30 }} 
-                            bgColor="#777873"
+                            bgColor="#ffffff"
+                            fgColor="#777873"
                             target="_blank"/>
             </span>
 
             <span class='px-2'>
                 <SocialIcon url='mailto: jjpeng@andrew.cmu.edu'
                             style={{ height: 30, width: 30 }} 
-                            bgColor="#777873"
+                            bgColor="#ffffff"
+                            fgColor="#777873"
                             target="_blank"/>
             </span>
         </div>

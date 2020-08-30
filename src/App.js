@@ -28,7 +28,6 @@ function App() {
   return (
     <Router>
       <MyNav currpath={window.location.pathname}/>
-
       <Switch>
           <Route exact path="/">
             <ScrollToTop/>

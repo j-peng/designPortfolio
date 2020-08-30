@@ -43,7 +43,7 @@ class Semantics extends React.Component {
     return (
         <div class='pt-4'>
             <SectionTitleWithBack name='Semantics of Form'
-                                  page='/'/>
+                                  href='/#work'/>
             <TitledContent title='Description'
                            body= 'Explore the semantics of form and how they encourage 
                                   interaction through hand crafted models and various 
