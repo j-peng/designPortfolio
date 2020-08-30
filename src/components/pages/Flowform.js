@@ -2,17 +2,17 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, SectionTitleWithBack } from '../ContentBlock.js'
 
 import '../../App.css';
 
 class FlowformSpatula extends React.Component {
   render(){
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Flowform wood spatula'></SectionTitle>
+        <div class='pt-4'>  
+            <SectionTitleWithBack name='Flowform wood spatula'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= 'Design and manufacture a spatula made from one 
                                   12" x 4" x 2" block of beech wood. Use 4 cuts on 

@@ -2,9 +2,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer, SectionTitle, SectionTitleWithBack} from '../ContentBlock.js'
 import Toggle from '../InPageToggle.js'
 
 import '../../App.css';
@@ -89,8 +88,9 @@ class PyProjects extends React.Component {
         page = <Chess/>
     }
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Python Coding Projects'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='Python Coding Projects'
+                                  page='/play'/>
             <TitledContent title='Description'
                            body= 'At the end of some introductory programming courses
                                   at CMU, students complete a Term Project. This project

@@ -2,9 +2,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, SectionTitle} from '../ContentBlock.js'
 
 import '../../App.css';
 

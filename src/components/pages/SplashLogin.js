@@ -2,9 +2,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, Divider} from '../ContentBlock.js'
+import {ContentBlock, Image, Divider, SectionTitle} from '../ContentBlock.js'
 import { Link } from "react-router-dom";
 
 import '../../App.css';

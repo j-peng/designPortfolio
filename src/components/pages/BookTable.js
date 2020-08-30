@@ -2,17 +2,18 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, YTVid, MultiImages, Spacer, PDF} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, YTVid, MultiImages, Spacer, PDF,
+       SectionTitleWithBack} from '../ContentBlock.js'
 
 import '../../App.css';
 
 class BookTable extends React.Component {
   render(){
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Book Table'></SectionTitle>
+        <div class='pt-4'>
+              <SectionTitleWithBack name='Book Table'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= 'Design a book table made from one 11" x 60 " x 1" 
                                   board of poplar wood. Join four perpendicular planes 

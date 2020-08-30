@@ -16,6 +16,7 @@ import NOCnSOS from './components/pages/NOCnSOS.js'
 import CSAContent from './components/pages/CSAContent.js'
 import CSAIllustration from './components/pages/CSAIllustration.js'
 import HeartDecisions from './components/pages/HeartDecisions.js'
+import GraphicDesign from './components/pages/GraphicDesign.js'
 
 import ScrollToTop from './components/ScrollToTop.js'
 
@@ -84,6 +85,10 @@ function App() {
           <Route path='/HeartDecisions'>
             <ScrollToTop/>
             <HeartDecisions/>
+          </Route>
+          <Route path='/graphics'>
+            <ScrollToTop/>
+            <GraphicDesign/>
           </Route>
 
       </Switch>

@@ -2,17 +2,17 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, SectionTitleWithBack} from '../ContentBlock.js'
 
 import '../../App.css';
 
 class CSAIllustration extends React.Component {
   render(){
     return (
-        <div class='pt-5'>
-            <SectionTitle name='CS Academy Illustrations'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='CS Academy Illustrations'
+                                  page='/play'/>
             <TitledContent title='Description'
                            body= 'CMU CS Academy is an interactive online high school 
                            computer science curriculum. As a member of the UX Design team, 

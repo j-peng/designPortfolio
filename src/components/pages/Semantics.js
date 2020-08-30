@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer, MultiImages} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer, MultiImages,
+        SectionTitleWithBack, SectionTitle} from '../ContentBlock.js'
 import Toggle from '../InPageToggle.js'
 
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -41,8 +41,9 @@ class Semantics extends React.Component {
     }
 
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Semantics of Form'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='Semantics of Form'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= 'Explore the semantics of form and how they encourage 
                                   interaction through hand crafted models and various 

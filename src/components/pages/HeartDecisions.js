@@ -2,17 +2,17 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, PDF} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, PDF, SectionTitleWithBack} from '../ContentBlock.js'
 
 import '../../App.css';
 
 class HeartDecisions extends React.Component {
   render(){
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Heart Decisions'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='Heart Decisions'
+                                  page='/play'/>
             <TitledContent title='Description'
                            body= 'Heart Decisions is an outreach activity centered around 
                            a card game. It is designed to teach high school students 

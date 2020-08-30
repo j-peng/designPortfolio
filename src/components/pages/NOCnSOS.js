@@ -2,10 +2,9 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
 import Toggle from '../InPageToggle.js'
-import {ContentBlock, Image, ImageLibrary, Divider, PDF, MultiImages} from '../ContentBlock.js'
+import {Image, Divider, PDF, SectionTitleWithBack, SectionTitle} from '../ContentBlock.js'
 
 import '../../App.css';
 
@@ -107,8 +106,9 @@ class NOCnSOS extends React.Component {
     }
 
     return (
-        <div class='pt-5'>
-            <SectionTitle name='Nourishing Our Communities + Scheduling Our Socials'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='Nourishing Our Communities + Scheduling Our Socials'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= 'Find a problem area on campus. Research 
                                   the problem and propose a design intervention.

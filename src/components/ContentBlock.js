@@ -6,6 +6,12 @@ import Col from 'react-bootstrap/Col'
 import Figure from 'react-bootstrap/Figure'
 
 import { RViewer, RViewerTrigger } from 'react-viewerjs'
+
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
+
+import { Link } from "react-router-dom";
+
 // import { Document, Page } from 'react-pdf';
 
 class TitledContent extends React.Component {
@@ -310,7 +316,7 @@ class Divider extends React.Component {
   render(){
     let margin = Math.floor((12 - this.props.size) / 2)
     return (
-      <div class='pb-5'>
+      <div class='pb-3'>
         <Container>
             <Row>
                 <Col md={margin}></Col>
@@ -452,6 +458,79 @@ class PDF extends React.Component {
 // }
 
 
+class ImgWithDesc extends React.Component {
+  render(){
+    return(
+      <OverlayTrigger
+        placement={this.props.placement}
+        overlay={<Tooltip>
+                  {this.props.text}
+                  </Tooltip>}>
+        <a>{this.props.image}</a>
+      </OverlayTrigger>
+    )
+  }
+}
+
+class SectionTitle extends React.Component {
+  render(){
+    return (
+      <div class='py-2'>
+        <Container name="top" fluid="md">
+            <Row>
+              <Col md = {2}>
+              </Col>
+              <Col md = {4}>
+                <h1>{this.props.name}</h1>
+              </Col>
+            </Row>
+        </Container>
+      </div>
+    )
+  }
+}
+
+class SectionTitleWithBack extends React.Component {
+  render(){
+    return (
+      <div class='py-2'>
+        <Container name="top" fluid="md">
+            <Row>
+              <Col md = {1}/>
+              <Col md = {1}>
+                <Link to={this.props.page} 
+                      class='p-link'>
+                  <a>back</a>
+                </Link>
+              </Col>
+              <Col md = {4}>
+                <h1>{this.props.name}</h1>
+              </Col>
+            </Row>
+        </Container>
+      </div>
+    )
+  }
+}
+
+class BackButton extends React.Component {
+  render(){
+    return(
+      <Container>
+        <Row>
+          <Col md={1}/>
+          <Col>
+              <Link to={this.props.page} class='p-link'>
+                <a>back</a>
+              </Link>
+          </Col>
+        </Row>
+      </Container>
+    )
+  }
+}
+
 export default TitledContent;
 export { ContentBlock, CustomContent, Image, ImageLibrary, Divider, SmallContentBlock, 
-         YTVid, MultiImages, Spacer, PDF };
+         YTVid, MultiImages, Spacer, PDF, ImgWithDesc, BackButton, SectionTitle, 
+         SectionTitleWithBack };

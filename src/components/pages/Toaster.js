@@ -2,9 +2,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, SectionTitleWithBack} from '../ContentBlock.js'
 
 import '../../App.css';
 
@@ -12,19 +11,24 @@ class SingleSliceToaster extends React.Component {
   render(){
     return (
         <div class='pt-5'>
-            <SectionTitle name='Single Slice Toaster'></SectionTitle>
+            <SectionTitleWithBack name='Single Slice Toaster'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= "Design a single slice toaster inside out. Consider
-                                  the interactions, mechanisms, and internal wiring
+                                  the experience, interactions, mechanisms, and internal wiring
                                   that creates the action of toasting. Use renderings
                                   to communicate the design and interaction. Do not
                                   use any materials to represent the object."></TitledContent>
-            <ContentBlock body="This single slice toaster causes the bread to move 
-                                with the user's actions with the knob. 
-                                The bread goes on a journey through the toaster,
-                                entering the top as bread and emerging from the side as toast.
-                                The user is responisble to driving this evolution from
-                                bread into toast."/>
+            <ContentBlock body="In this toaster design, bread enters through a 
+                                slot at the top and is relseased 
+                                from a door on the side of the toaster.
+                                The user engages with the bread through the toasting process
+                                by lowering the toast (by pressing the knob in and sliding it down),
+                                deciding on the level of toast (by determining how far
+                                to drag the knob down), and releasing the toast (by twisting the knob).
+                                Since the user is actively involved in many steps of the toasting
+                                process, this single slice toaster is designed to embrace the process
+                                and experience of toasting. "/>
 
             <TitledContent title='Tools + Skills'
                            body='SolidWorks, KeyShot'></TitledContent>

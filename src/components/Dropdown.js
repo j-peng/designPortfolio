@@ -10,8 +10,14 @@ class MyDropdown extends React.Component {
     constructor(props){
       super(props)
     }
-
     render(){
+      let items = []
+      for (let i=0; i < this.props.categories.length; i++){
+        let category = this.props.categories[i]
+        items.push(
+          <Dropdown.Item onClick = {() => this.props.onClick(category)}>{category}</Dropdown.Item>
+        )
+      }
       return (
           <Dropdown style={{display: 'flex', justifyContent: 'flex-end'}} className='my-dropdown'>
             <Dropdown.Toggle variant='light'>
@@ -19,9 +25,7 @@ class MyDropdown extends React.Component {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item onClick = {() => this.props.onClick('All')}>All</Dropdown.Item>
-                <Dropdown.Item onClick = {() => this.props.onClick('Products')}>Products</Dropdown.Item>
-                <Dropdown.Item onClick = {() => this.props.onClick('UI/UX')}>UI/UX</Dropdown.Item>
+                {items}
             </Dropdown.Menu>
            </Dropdown>
       )

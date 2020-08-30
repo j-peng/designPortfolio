@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import SectionTitle from '../SectionTitle.js'
 import TitledContent from '../ContentBlock.js'
+import { SectionTitleWithBack } from '../ContentBlock.js'
 
 import Toggle from '../InPageToggle.js'
 
@@ -45,8 +45,9 @@ class CSAcademy extends React.Component {
     }
 
     return (
-        <div class='pt-5'>
-            <SectionTitle name='CMU CS Academy'></SectionTitle>
+        <div class='pt-4'>
+            <SectionTitleWithBack name='CMU CS Academy'
+                                  page='/'/>
             <TitledContent title='Description'
                            body= "CMU CS Academy is an interactive online high 
                                  school computer science curriculum. As a member 

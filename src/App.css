@@ -107,8 +107,6 @@ p {
   color: #FFFFFF;
 }
 
-
-
 .tab-button {
   color: #BCBDB7 !important;
   font-size: 14px;
@@ -249,4 +247,27 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card-title { 
+  font-size: 1.5em;
+  padding: 15px; 
+  position: absolute; 
+  left: 0; 
+  width: 100%; 
+}
+
+.card-category { 
+  font-size: 1em;
+  padding: 15px; 
+  margin-top: 40px;
+  position: absolute; 
+  left: 0; 
+  width: 100%; 
+}
+
+.white-background{
+  padding: 2px; 
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.4);
 }
