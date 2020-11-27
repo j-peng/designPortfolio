@@ -23,6 +23,18 @@ class Home extends React.Component {
     // FOR ALL MY WORKS
     // IN ORDER
     let allCards = [
+      <GalleryCard title={'3 chess sets'}
+                    category={'Product Design'}
+                    img={require("./media/cover_chess.jpg")}
+                    path={'/chesssets'}/>,
+      <GalleryCard title={'CMU CS Academy'}
+                    category={'UI/UX + Design Research'}
+                    img={require("./media/cover_csa.jpg")}
+                    path={'/csacademy'}/>,
+      <GalleryCard title={'On-the-go food experience'}
+                    category={'Product Design'}
+                    img={require("./media/cover_mealexperience.jpg")}
+                    path={'/snackexperience'}/>,
       <GalleryCard title={'Flowform wood spatula'}
                    category={'Product Design'}
                    img={require("./media/cover_spatula.jpg")}
@@ -31,18 +43,14 @@ class Home extends React.Component {
                     category={'Product Design'}
                     img={require("./media/cover_booktable.jpg")}
                     path={'/booktable'}/>,
-      <GalleryCard title={'CMU CS Academy'}
-                    category={'UI/UX + Design Research'}
-                    img={require("./media/cover_csa.jpg")}
-                    path={'/csacademy'}/>,
-      <GalleryCard title={'Semantics of form exploration'}
-                    category={'Product Design'}
-                    img={require("./media/cover_semantics.jpg")}
-                    path={'/semantics'}/>,
-      <GalleryCard title={'Single slice toaster'}
-                      category={'Product Design'}
-                      img={require("./media/cover_toaster.jpg")}
-                      path={'/toaster'}/>,
+      // <GalleryCard title={'Semantics of form exploration'}
+      //               category={'Product Design'}
+      //               img={require("./media/cover_semantics.jpg")}
+      //               path={'/semantics'}/>,
+      // <GalleryCard title={'Single slice toaster'}
+      //                 category={'Product Design'}
+      //                 img={require("./media/cover_toaster.jpg")}
+      //                 path={'/toaster'}/>,
       <GalleryCard title={'Nourishing our communities + Scheduling our Socials'}
                       category={'UI/UX + Design Research'}
                       img={require("./media/cover_nocsos.jpg")}

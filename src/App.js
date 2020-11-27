@@ -6,6 +6,8 @@ import About from './components/About.js';
 import Footer from './components/Footer.js'
 import MyNav from './components/Navbar.js'
 
+import FoodExperience from './components/pages/SnackExperience.js'
+import ChessSet from './components/pages/ChessSets.js'
 import CSAcademy from './components/pages/CSAcademy.js'
 import FlowformSpatula from './components/pages/Flowform.js'
 import PyProjects from './components/pages/Python.js'
@@ -51,14 +53,22 @@ function App() {
             <ScrollToTop/>
             <BookTable/>
           </Route>
-          <Route path="/toaster">
+          <Route path="/chesssets">
+            <ScrollToTop/>
+            <ChessSet/>
+          </Route>
+          <Route path="/snackexperience">
+            <ScrollToTop/>
+            <FoodExperience/>
+          </Route>
+          {/* <Route path="/toaster">
             <ScrollToTop/>
             <SingleSliceToaster/>
-          </Route>
-          <Route path="/semantics">
+          </Route> */}
+          {/* <Route path="/semantics">
             <ScrollToTop/>
             <Semantics/>
-          </Route>
+          </Route> */}
           <Route path="/csacademy">
             <ScrollToTop/>
             <CSAcademy/>

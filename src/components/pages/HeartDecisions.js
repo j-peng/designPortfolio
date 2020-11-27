@@ -3,16 +3,15 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TitledContent from '../ContentBlock.js'
-import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, PDF, SectionTitleWithBack} from '../ContentBlock.js'
+import {ContentBlock, Image, ImageLibrary, Divider, MultiImages, Spacer, PDF, SectionTitle} from '../ContentBlock.js'
 
 import '../../App.css';
 
 class HeartDecisions extends React.Component {
   render(){
     return (
-        <div class='pt-4'>
-            <SectionTitleWithBack name='Heart Decisions'
-                                  page='/play'/>
+        <div>
+            <SectionTitle name='Heart Decisions'/>
             <TitledContent title='Description'
                            body= 'Heart Decisions is an outreach activity centered around 
                            a card game. It is designed to teach high school students 
@@ -64,11 +63,11 @@ class HeartDecisions extends React.Component {
                 size={6}
                 caption={'Game introduction presentation slides'}
                 altText={''}/>
-            <PDF file={require("../media/heartdecisions_peoplecards.pdf")}
+            {/* <PDF file={require("../media/heartdecisions_peoplecards.pdf")}
                  size={4} ratio={3/2.5} caption={'People card back and all people cards'}/>
             <Spacer size={2}/>
             <PDF file={require("../media/heartdecisions_devicecards.pdf")}
-                 size={4} ratio={3/2.5} caption={'Device card back and all device cards'}/>
+                 size={4} ratio={3/2.5} caption={'Device card back and all device cards'}/> */}
 
         </div>
     )

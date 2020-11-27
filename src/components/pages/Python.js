@@ -2,6 +2,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import CSAContent from './CSAContent'
+
 import TitledContent from '../ContentBlock.js'
 import {ContentBlock, Image, ImageLibrary, Divider, YTVid, Spacer, SectionTitle, SectionTitleWithBack} from '../ContentBlock.js'
 import Toggle from '../InPageToggle.js'
@@ -68,8 +70,8 @@ class PyProjects extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      tabs: ['Unifinished Duck Game', 'Simply Chess'],
-      tabStates: [ true, false]
+      tabs: ['Unifinished Duck Game', 'Simply Chess', 'CS Academy Content Development'],
+      tabStates: [ true, false, false]
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -86,20 +88,19 @@ class PyProjects extends React.Component {
     let page = <DuckGame/>
     if (this.state.tabStates[1]) {
         page = <Chess/>
+    } else if (this.state.tabStates[2]) {
+      page = <CSAContent/>
     }
     return (
         <div class='pt-4'>
             <SectionTitleWithBack name='Python Coding Projects'
                                   page='/play'/>
             <TitledContent title='Description'
-                           body= 'At the end of some introductory programming courses
-                                  at CMU, students complete a Term Project. This project
-                                  can be anything and its purpose is to showcase and 
-                                  apply the knowledge gained from
-                                  a semester in a cumulative project.'></TitledContent>
-            <TitledContent title='Course'
-                           body='15-110 Principles of Computing, 15-112 
-                                Fundamentals of Programming and Computer Science'></TitledContent>
+                           body= 'This page contains creative coding projects written in Python and
+                           various Python libraries. These include term projects for 15-110 and 15-122
+                           (Principles of Computing and Fundamentals of Programming and Computer Science) 
+                           and exercises created to teach Computer Science to high school students'></TitledContent>
+
             <Toggle tabs = {this.state.tabs}
                     break={'bottom'}
                     tabStates={this.state.tabStates}
