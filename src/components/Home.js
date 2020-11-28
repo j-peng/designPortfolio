@@ -43,14 +43,6 @@ class Home extends React.Component {
                     category={'Product Design'}
                     img={require("./media/cover_booktable.jpg")}
                     path={'/booktable'}/>,
-      // <GalleryCard title={'Semantics of form exploration'}
-      //               category={'Product Design'}
-      //               img={require("./media/cover_semantics.jpg")}
-      //               path={'/semantics'}/>,
-      // <GalleryCard title={'Single slice toaster'}
-      //                 category={'Product Design'}
-      //                 img={require("./media/cover_toaster.jpg")}
-      //                 path={'/toaster'}/>,
       <GalleryCard title={'Nourishing our communities + Scheduling our Socials'}
                       category={'UI/UX + Design Research'}
                       img={require("./media/cover_nocsos.jpg")}
