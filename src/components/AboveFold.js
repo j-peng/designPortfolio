@@ -52,92 +52,73 @@ class AboveFold extends React.Component {
     const width = this.state.width
     const isMobile = width <= 700
 
-    let splashImg = require("./media/splash_products.png")
-    if (this.state.imageStyle === false){
-      splashImg = require("./media/splash_uiux.png")
-    }
-
     if (isMobile) {
       return(
         <div>
           <Container name="top" fluid="md">
-            <Spacer size={4}/>
-            <a onClick={() => this.handleImageClick()}>
-                    <img src={splashImg} 
-                        alt="Stickers of different design projects"
-                        width={this.state.width * 0.5}
-                        class='centered-img'/>
-            </a>
-            <div class='pl-5'>
-              <h2 class='pt-5'>Hey there, I'm Janet</h2>
+            <div>
+              <div class='py-4'>
+                <p class='pt-5 mid'>Hi all, my name is Janet Peng and I’m a </p>
+                <h1 class='aboveFoldTitle'>Product Designer</h1>
+                <h1 class='aboveFoldTitle light'>& Programmer</h1>
+                <p class='pt-4 mid'>I'm a junior studying Product Design and Computer Science at CMU</p>
+                <p class='mid'>I'm currently the UX Design Lead at <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
+              </div>
             
-            <div class='pt-4'>
-            <Link activeClass="active" to="work" spy={true} smooth={true} duration={800}> 
-              <a class='aboveFoldLink'>See my work <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                              </svg></a>
-            </Link>
-            </div>
+              <div class='pt-4'>
+              <Link activeClass="active" to="projects" spy={true} smooth={true} duration={800}> 
+                <a class='aboveFoldLink'>See my work <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                </svg></a>
+              </Link>
+              </div>
 
-            <div class='pt-2'>
-              <a href='/about' class='aboveFoldLink'>
-                More about me 
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg></a>
-            </div>
+              <div class='pt-2'>
+                <a href='/about' class='aboveFoldLink'>
+                  More about me 
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg></a>
+              </div>
             </div>
 
           </Container>
         </div>
       )
     } else {
-      let tagLine = <TypingIntros phrase={this.state.introductions[this.state.introIndex]}
-      changeIntro = {() => this.changeIntro()}/>
-
-      if (this.props.isAnimating === false) {
-        tagLine = <h2>Janet Peng</h2>
-      } else if (this.state.isAnimating === false) {
-        if (this.state.imageStyle === true) {
-          tagLine = <h2>Janet - a Product Designer</h2>
-      } else {
-        tagLine = <h2>Janet - a UX Designer</h2>
-        }
-      }
       return (
         <div class='py-3'>
         <Spacer size={2}/>
         <Container name="top" fluid="md">
           <Row>
-                <Col md = {2}/>
-                <Col>
-                  <a onClick={() => this.handleImageClick()}>
-                    <img src={splashImg} 
-                        alt="Stickers of different design projects"
-                        width={this.state.width/12 * 5 * 0.6}/>
-                  </a>
-                </Col>
-                <Col>
-                  <Spacer size={3}/>
-                  <h2 class='pt-5'>Hey there, I'm</h2>
-                  {tagLine}
+                <Col md={3}/>
 
-                  <div class='pt-5'>
-                  <Link activeClass="active" to="work" spy={true} smooth={true} duration={800}> 
-                    <a class='aboveFoldLink'>See my work <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                   </svg></a>
-                  </Link>
+                <Col>
+                  <Spacer size={5}/>
+                  <div class='py-4'>
+                  <p class='pt-5 mid'>Hi all, my name is Janet Peng and I’m a </p>
+                  <h1 class='aboveFoldTitle'>Product Designer</h1>
+                  <h1 class='aboveFoldTitle light'>& Programmer</h1>
+                  <p class='pt-4 mid'>I'm a junior studying Product Design and Computer Science at CMU</p>
+                  <p class='mid'>I'm currently the UX Design Lead at <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
                   </div>
 
                   <div class='pt-2'>
-                    <a href='/about' class='aboveFoldLink'>
-                      More about me 
-                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                      </svg></a>
-                  </div>
+                    <Link activeClass="active" to="projects" spy={true} smooth={true} duration={800}> 
+                      <a class='aboveFoldLink'>See my work <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></a>
+                    </Link>
+                    </div>
 
+                    <div class='pt-1'>
+                      <a href='/about' class='aboveFoldLink'>
+                        More about me 
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg></a>
+                    </div>
+                    <Spacer size={5}/>
                 </Col>
           </Row>
         </Container>

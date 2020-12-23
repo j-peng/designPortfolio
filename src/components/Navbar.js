@@ -8,22 +8,47 @@ import Nav from 'react-bootstrap/Nav'
 import '../App.css';
 
 class MyNav extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            width: window.innerWidth,
+          }
+    }
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange)
+      }
+    
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange)
+      }
+      
+      handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth })
+      };
     render(){
+        const width = this.state.width
+        const isMobile = width <= 700
+        let bgclass = "transparent"
+        if (isMobile) {
+            bgclass = "light"
+        }
+
         return (
-            <Navbar bg="light" variant="light" sticky="top" className='pl-4' >
+            <Navbar bg={bgclass} variant="light" sticky="top" className='pl-4' >
             <Navbar.Brand href='/'>
-                <img src={require("./media/logo.png")} 
+                <img src={require("./media/jmid.png")} 
                      alt="Janet Peng"
-                     width="25"/>
+                     width="32"/>
 
             </Navbar.Brand>
             <Nav className="pt-2">
-            <Nav.Link href='/#work'>
-                <h6 class={(this.props.currpath === '/') ? 'darknbold' : 'light'}>Work</h6></Nav.Link>
+            <Nav.Link href='/#projects'>
+                <h6 class={(this.props.currpath === '/') ? 'darknbold' : 'light'}>Projects</h6></Nav.Link>
             <Nav.Link href='/play'>
                 <h6 class={(this.props.currpath === '/play') ? 'darknbold' : 'light'}>Play</h6></Nav.Link>
             <Nav.Link href='/about'>
-                <h6 class={(this.props.currpath === '/about') ? 'darknbold' : 'light'}>About</h6></Nav.Link>
+                <h6 class={(this.props.currpath === '/about') ? 'darknbold' : 'light'}>Person</h6></Nav.Link>
             </Nav>
         </Navbar>
         )

@@ -108,7 +108,7 @@ class NOCnSOS extends React.Component {
     return (
         <div class='pt-4'>
             <SectionTitleWithBack name='Nourishing Our Communities + Scheduling Our Socials'
-                                  href='/#work'/>
+                                  href='/#projects'/>
             <TitledContent title='Description'
                            body= 'Find a problem area on campus. Research 
                                   the problem and propose a design intervention.

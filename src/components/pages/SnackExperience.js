@@ -12,7 +12,7 @@ class FoodExperience extends React.Component {
     return (
         <div class='pt-5'>
             <SectionTitleWithBack name='On-the-go Food Experience'
-                                  href='/#work'/>
+                                  href='/#projects'/>
             <TitledContent title='Description'
                            body= "Design a food carrier that enhances the everyday experience of eating on-the-go.
                                   This snack container creates a tactile eating experience designed for students

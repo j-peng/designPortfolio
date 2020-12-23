@@ -13,7 +13,7 @@ class BookTable extends React.Component {
     return (
         <div class='pt-4'>
               <SectionTitleWithBack name='Book Table'
-                                    href='/#work'/>
+                                    href='/#projects'/>
             <TitledContent title='Description'
                            body= 'Design a book table made from one 11" x 60 " x 1" 
                                   board of poplar wood. Join four perpendicular planes 

@@ -12,7 +12,7 @@ class ChessSet extends React.Component {
     return (
         <div class='pt-5'>
             <SectionTitleWithBack name='3 Maple and Walnut Chess Sets'
-                                  href='/#work'/>
+                                  href='/#projects'/>
             <TitledContent title='Description'
                            body= 'Three "identical" weighted maple and walnut chess sets on 10" x 10" laser engraved 
                                   slate tile. Designed to be durable and act as a heirloom to be passed down generations.

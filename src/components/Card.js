@@ -102,6 +102,10 @@ class GalleryCard extends React.Component {
   render() {
     const width = this.state.width
     const isMobile = width <= 700
+    let desktopClass = 'pl-0 pt-2 mr-1 align-right'
+    if (this.props.align == 'left'){
+      desktopClass = 'pl-0 pt-2 mr-1'
+    }
 
 
     if (isMobile) {
@@ -113,7 +117,7 @@ class GalleryCard extends React.Component {
                 <Card.Img variant="top rounded-sm" src={this.props.img} alt="Card image"/>
               </Link>
               <Card.Body class = 'pl-0 pt-2 pr-5 mr-5'>
-                  <h3>{this.props.title}</h3>
+                  <h3 class='decreaseSpacing'>{this.props.title}</h3>
                   <h6>{this.props.category}</h6>
               </Card.Body>
             </div>
@@ -125,18 +129,16 @@ class GalleryCard extends React.Component {
         <div class = 'pt-2 pb-5'>
           <Container>
             <Row>
-              <Col md={3}/>
+              
               <Col>
                 <div class='border-0 project-card'>
                   <Link to={this.props.path} class='card'>
                     <Card.Img variant="top rounded-sm" src={this.props.img} alt="Card image"/>
-                    <h3 class='card-title'><span class='white-background'>{this.props.title}</span></h3>
-                    <h6 class='card-category'><span class='white-background'>{this.props.category}</span></h6>
                   </Link>
-                  {/* <Card.Body class = 'pl-0 pt-2 pr-5 mr-5'>
-                      <h3>{this.props.title}</h3>
+                  <Card.Body class = {desktopClass}>
+                      <h3 class='decreaseSpacing'>{this.props.title}</h3>
                       <h6>{this.props.category}</h6>
-                  </Card.Body> */}
+                  </Card.Body>
                 </div>
               </Col>
             </Row>

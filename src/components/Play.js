@@ -1,6 +1,7 @@
 import React from 'react';
 
 import GalleryCard from './Card.js'
+import GalleryRow from './GalleryRow.js'
 import SectionTitle from './SectionTitle.js'
 import TitledContent from './ContentBlock.js'
 import MyDropdown from './Dropdown.js'
@@ -21,25 +22,41 @@ class Play extends React.Component {
     // FOR ALL MY WORKS
     // IN ORDER
     let allCards = [
-      // <GalleryCard title={'Heart Decisions'}
-      //               category={'Illustration + Graphic Design'}
+      // <GalleryCard title={'Sketchbook'}
+      //               category={'Drawing + Illustration'}
       //               img={require("./media/cover_bme.jpg")}
-      //               path={'/HeartDecisions'}/>,
+      //               path={'/drawing'}
+      //               align={'left'}/>,
+      
+      <GalleryCard title={'CAD Modeling and Rendering'}
+                    category={'Product Design'}
+                    img={require("./media/cover_cadmodelling.jpg")}
+                    path={'/CAD'}
+                    align={'left'}/>,
+
+      <GalleryCard title={'Manufacturing and Assembly'}
+                    category={'Product Design'}
+                    img={require("./media/cover_htam.jpg")}
+                    path={'/DFM+DFA'}
+                    align={'left'}/>,
 
       <GalleryCard title={'Graphic and Layout Design'}
                     category={'Graphic Design'}
                     img={require("./media/cover_graphicdesign.jpg")}
-                    path={'/graphics'}/>,
+                    path={'/graphics'}
+                    align={'left'}/>,
 
       <GalleryCard title={'Python Coding Projects'}
                     category={'Programming'}
                     img={require("./media/cover_python.png")}
-                    path={'/python'}/>,
+                    path={'/python'}
+                    align={'left'}/>,
 
       <GalleryCard title={'CMU CS Academy Illustrations'}
                     category={'Illustration'}
                     img={require("./media/cover_csaillustration.png")}
-                    path={'/CSAillustration'}/>,
+                    path={'/CSAillustration'}
+                    align={'left'}/>,
       
       // <GalleryCard title={'CMU CS Academy Content Development'}
       //               category={'Programming'}
@@ -51,10 +68,24 @@ class Play extends React.Component {
       filter: 'All',
       allCards: allCards.slice(),
       currCards: allCards.slice(),
+      width: window.innerWidth,
     }
 
     this.handleClick = this.handleClick.bind(this)
+    
   }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange)
+  }
+  
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth })
+  };
 
   createCardGallery(){
     let cards = this.state.currCards
@@ -94,31 +125,31 @@ class Play extends React.Component {
     }
   }
 
+
   render(){
     let cards = this.createCardGallery()
-    return (
+
+    const width = this.state.width
+    const isMobile = width <= 700
+    
+    if (isMobile) {
+      return(
         <div>
-            <Container>
-              <Row>
-                <Col md='3'/>
-                <Col>
-                  <h1>Play</h1>
-                </Col>
-                <Col>
-                  <MyDropdown currCategory={this.state.filter} 
-                                onClick={(i) => this.handleClick(i)}
-                                categories={['All', 'Programming', 'Illustration', 'Graphic']}/>
-                </Col>
-              </Row>
-            </Container>
-            
-            <div>
-              <Container name="top" fluid="md">
-                {cards}
-              </Container>
-            </div>
-          </div>
-    )
+          <h1 class='pt-3 pl-3'>Play</h1>
+          {cards}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <Container>
+            <h1 class='pt-3 pl-3'>Play</h1>
+            <GalleryRow card1={this.state.allCards[0]} card2={this.state.allCards[1]} card3={this.state.allCards[2]}></GalleryRow>
+            <GalleryRow card1={this.state.allCards[3]} card2={this.state.allCards[4]} card3={this.state.allCards[5]}></GalleryRow>
+          </Container>
+        </div>
+      )
+    }
   }
 }
 

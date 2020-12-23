@@ -12,7 +12,7 @@ class FlowformSpatula extends React.Component {
     return (
         <div class='pt-4'>  
             <SectionTitleWithBack name='Flowform wood spatula'
-                                  href='/#work'/>
+                                  href='/#projects'/>
             <TitledContent title='Description'
                            body= 'Design and manufacture a spatula made from one 
                                   12" x 4" x 2" block of beech wood. Use 4 cuts on 

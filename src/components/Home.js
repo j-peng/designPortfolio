@@ -35,14 +35,18 @@ class Home extends React.Component {
                     category={'Product Design'}
                     img={require("./media/cover_mealexperience.jpg")}
                     path={'/snackexperience'}/>,
-      <GalleryCard title={'Flowform wood spatula'}
-                   category={'Product Design'}
-                   img={require("./media/cover_spatula.jpg")}
-                   path={'/flowform'}/>,
       <GalleryCard title={'Book table'}
                     category={'Product Design'}
                     img={require("./media/cover_booktable.jpg")}
                     path={'/booktable'}/>,
+      // <GalleryCard title={'HEMOATH'}
+      //               category={'Product Design'}
+      //               img={require("./media/cover_hemoath.jpg")}
+      //               path={'/safety'}/>,
+      <GalleryCard title={'Flowform wood spatula'}
+                    category={'Product Design'}
+                    img={require("./media/cover_spatula.jpg")}
+                    path={'/flowform'}/>,
       <GalleryCard title={'Nourishing our communities + Scheduling our Socials'}
                       category={'UI/UX + Design Research'}
                       img={require("./media/cover_nocsos.jpg")}
@@ -109,28 +113,28 @@ class Home extends React.Component {
     return (
         <div>
             <AboveFold isAnimating={this.state.isAnimating}></AboveFold>
-            <div name='work' class='pb-5' id='work'/>
+            <div name='projects' class='pb-5' id='projects'/>
             <Spacer size={2}/>
             <Container>
               <Row>
-                <Col md='3'/>
-                <Col>
-                  <h1>Work</h1>
-                </Col>
-                <Col>
+                <Col md='2'>
+                  <h1 class='align-right pt-3'>Projects</h1>
                   <MyDropdown currCategory={this.state.filter} 
                                 onClick={(i) => this.handleClick(i)}
                                 categories={['All', 'Product', 'UI/UX']}/>
                 </Col>
+                <Col>
+                    {cards}
+                </Col>
               </Row>
             </Container>
             
-            <div>
+            {/* <div>
               <Container name="top" fluid="md">
                 {cards}
               </Container>
 
-            </div>
+            </div> */}
           </div>
     )
   }

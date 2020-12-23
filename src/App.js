@@ -8,17 +8,25 @@ import MyNav from './components/Navbar.js'
 
 import FoodExperience from './components/pages/SnackExperience.js'
 import ChessSet from './components/pages/ChessSets.js'
+import PersonalSafety from './components/pages/PersonalSafety.js'
 import CSAcademy from './components/pages/CSAcademy.js'
 import FlowformSpatula from './components/pages/Flowform.js'
-import PyProjects from './components/pages/Python.js'
-import Semantics from './components/pages/Semantics.js'
-import BookTable from './components/pages/BookTable.js'
-import SingleSliceToaster from './components/pages/Toaster.js'
 import NOCnSOS from './components/pages/NOCnSOS.js'
+import BookTable from './components/pages/BookTable.js'
+
+import Semantics from './components/pages/Semantics.js'
+import SingleSliceToaster from './components/pages/Toaster.js'
+
+
+import PyProjects from './components/pages/Python.js'
 import CSAContent from './components/pages/CSAContent.js'
 import CSAIllustration from './components/pages/CSAIllustration.js'
 import HeartDecisions from './components/pages/HeartDecisions.js'
 import GraphicDesign from './components/pages/GraphicDesign.js'
+import CAD from './components/pages/CADModels.js'
+import Sketchbook from './components/pages/Drawings.js'
+import HTAM from './components/pages/HTAM.js'
+
 
 import ScrollToTop from './components/ScrollToTop.js'
 
@@ -61,6 +69,10 @@ function App() {
             <ScrollToTop/>
             <FoodExperience/>
           </Route>
+          <Route path="/safety">
+            <ScrollToTop/>
+            <PersonalSafety/>
+          </Route>
           {/* <Route path="/toaster">
             <ScrollToTop/>
             <SingleSliceToaster/>
@@ -94,6 +106,18 @@ function App() {
           <Route path='/HeartDecisions'>
             <ScrollToTop/>
             <HeartDecisions/>
+          </Route>
+          <Route path='/CAD'>
+            <ScrollToTop/>
+            <CAD/>
+          </Route>
+          <Route path='/drawing'>
+            <ScrollToTop/>
+            <Sketchbook/>
+          </Route>
+          <Route path='/DFM+DFA'>
+            <ScrollToTop/>
+            <HTAM/>
           </Route>
           <Route path='/graphics'>
             <ScrollToTop/>
