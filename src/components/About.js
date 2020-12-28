@@ -35,6 +35,7 @@ class About extends React.Component {
             "I'm a proud Canadian. My typical Tims (Tim Hortons) order is an Old Fashioned Plain donut and a small English Breakfast (1 milk).",
             "My friends used to call be penguin because my last name is Peng. I like penguins.",
             'I believe that veggies make a meal a meal. Thus, pizza is not a meal. My friends disagree.',
+            <a href='https://www.npr.org/2012/08/24/159975466/corrections-and-comments-to-stories' target='_blank' class='p-link'>https://www.npr.org/2012/08/24/159975466/corrections-and-comments-to-stories</a>,
             <a href='https://youtu.be/r06zrQ2mP34' target='_blank' class='p-link'>https://youtu.be/r06zrQ2mP34</a>,
             <a href='https://www.youtube.com/watch?v=JWfULMcFikI' target='_blank' class='p-link'>https://www.youtube.com/watch?v=JWfULMcFikI</a>,
             <p>My photo on this page was taken by my roommate (
@@ -84,14 +85,14 @@ class About extends React.Component {
                     <h4 class='pb-2 darknbold'>Hi All! <span class='px-1'/></h4>
                     <p class='increaseSpacing sixteenfont'>
                         I'm Janet, a junior majoring in&nbsp;
-                            <a class='link' target='_blank' href='https://design.cmu.edu/'>Product Design</a>&nbsp;
+                            <a class='midlight' target='_blank' href='https://design.cmu.edu/'>Product Design</a>&nbsp;
                         and minoring in&nbsp;
-                        <a class='link' target='_blank' href='https://www.scs.cmu.edu/'>Computer Science</a>&nbsp;
+                        <a class='midlight' target='_blank' href='https://www.scs.cmu.edu/'>Computer Science</a>&nbsp;
                         at Carnegie Mellon University. 
                     </p>
                     <p class='increaseSpacing sixteenfont'>
                         I am also the UX Design Lead and a Content Developer at&nbsp;
-                        <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a>.
+                        <a class='midlight' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a>.
                     </p>
                     <p class='pt-2'><a href={require("./media/resume.pdf")} 
                             target='_blank' 
@@ -157,14 +158,14 @@ class About extends React.Component {
                             <h4 class='pb-2 darknbold'>Hi All! <span class='px-1'/></h4>
                             <p class='increaseSpacing sixteenfont'>
                                 I'm Janet, a junior majoring in&nbsp;
-                                 <a class='link' target='_blank' href='https://design.cmu.edu/'>Product Design</a>&nbsp;
+                                 <a class='midlight' target='_blank' href='https://design.cmu.edu/'>Product Design</a>&nbsp;
                                 and minoring in&nbsp;
-                                <a class='link' target='_blank' href='https://www.scs.cmu.edu/'>Computer Science</a>&nbsp;
+                                <a class='midlight' target='_blank' href='https://www.scs.cmu.edu/'>Computer Science</a>&nbsp;
                                 at Carnegie Mellon University. 
                             </p>
                             <p class='increaseSpacing sixteenfont'>
                                 I am also the UX Design Lead and a Content Developer at&nbsp;
-                                <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a>.
+                                <a class='midlight' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a>.
                             </p>
                             <p class='pt-4'><a href={require("./media/resume.pdf")} 
                                   target='_blank' 

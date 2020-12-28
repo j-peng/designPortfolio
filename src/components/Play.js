@@ -22,11 +22,11 @@ class Play extends React.Component {
     // FOR ALL MY WORKS
     // IN ORDER
     let allCards = [
-      // <GalleryCard title={'Sketchbook'}
-      //               category={'Drawing + Illustration'}
-      //               img={require("./media/cover_bme.jpg")}
-      //               path={'/drawing'}
-      //               align={'left'}/>,
+      <GalleryCard title={'Graphic and Layout Design'}
+                  category={'Graphic Design'}
+                  img={require("./media/cover_graphicdesign.jpg")}
+                  path={'/graphics'}
+                  align={'left'}/>,
       
       <GalleryCard title={'CAD Modeling and Rendering'}
                     category={'Product Design'}
@@ -39,11 +39,11 @@ class Play extends React.Component {
                     img={require("./media/cover_htam.jpg")}
                     path={'/DFM+DFA'}
                     align={'left'}/>,
-
-      <GalleryCard title={'Graphic and Layout Design'}
-                    category={'Graphic Design'}
-                    img={require("./media/cover_graphicdesign.jpg")}
-                    path={'/graphics'}
+      
+      <GalleryCard title={'Sketchbook'}
+                    category={'Drawing + Illustration'}
+                    img={require("./media/cover_sketchbook.jpg")}
+                    path={'/drawing'}
                     align={'left'}/>,
 
       <GalleryCard title={'Python Coding Projects'}

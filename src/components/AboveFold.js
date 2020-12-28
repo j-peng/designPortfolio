@@ -62,7 +62,7 @@ class AboveFold extends React.Component {
                 <h1 class='aboveFoldTitle'>Product Designer</h1>
                 <h1 class='aboveFoldTitle light'>& Programmer</h1>
                 <p class='pt-4 mid'>I'm a junior studying Product Design and Computer Science at CMU</p>
-                <p class='mid'>I'm currently the UX Design Lead at <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
+                <p class='mid'>I'm currently the UX Design Lead at <a class='midlight' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
               </div>
             
               <div class='pt-4'>
@@ -100,7 +100,7 @@ class AboveFold extends React.Component {
                   <h1 class='aboveFoldTitle'>Product Designer</h1>
                   <h1 class='aboveFoldTitle light'>& Programmer</h1>
                   <p class='pt-4 mid'>I'm a junior studying Product Design and Computer Science at CMU</p>
-                  <p class='mid'>I'm currently the UX Design Lead at <a class='link' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
+                  <p class='mid'>I'm currently the UX Design Lead at <a class='midlight' target='_blank' href='https://academy.cs.cmu.edu'>CMU CS Academy</a></p>
                   </div>
 
                   <div class='pt-2'>
